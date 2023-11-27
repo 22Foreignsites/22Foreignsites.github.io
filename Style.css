@@ -1,10 +1,17 @@
 body{
   background-color:darkslategray;
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
 }
 h1{
   color: rgb(255, 255, 255);
   text-align: center;
+  width: 100%;
+}
+h1:hover{
+color: pink;
+text-align: center;
+width: 100%;
 }
 a{
   text-decoration: none;
@@ -21,8 +28,11 @@ a:visited{
 .assign{
   margin: 10px;
   padding: 10px;
+  border-radius: 20px;
   background-color: rgb(255, 255, 255);
-  display: flex;
+  display: block;
+  width: 20%;
+  box-shadow: 8px 8px black;
 }
 .assign img{
   width: 200px;
@@ -30,7 +40,7 @@ a:visited{
   border: 2px solid grey;
 }
 
-.assign img{
+.assign img:hover{
   width: 200px;
   margin: 10px; 
   border: 2px solid pink;
