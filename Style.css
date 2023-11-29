@@ -2,16 +2,19 @@ body{
   background-color:darkslategray;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
+  flex-wrap: wrap;
 }
 h1{
   color: rgb(255, 255, 255);
   text-align: center;
   width: 100%;
+  display: block;
 }
 h1:hover{
 color: pink;
 text-align: center;
 width: 100%;
+display: block;
 }
 a{
   text-decoration: none;
@@ -20,6 +23,7 @@ a{
 a:hover{
   text-decoration: none;
   color: pink;
+  width: 100%;
 }
 a:visited{
   text-decoration: none;
