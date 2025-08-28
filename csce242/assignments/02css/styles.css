@@ -1,0 +1,54 @@
+
+body{
+    font-family: 'Times New Roman', Times, sans-serif;
+    background-color: #F7E6DE;
+}
+
+#table table{
+     border-collapse: collapse;
+     background-color: #E6F7DE;
+     margin: 0 auto;
+}
+#table td, th{
+    border:1px solid black;
+    padding:5px 10px; /*top and bottom 5px, left and right 10px */
+    color: #4F7302;
+   
+}
+#table h3{
+    text-align: center;
+    color: #79AEF2;
+}
+
+#title{
+    text-align: center;
+    color: #4F7302;
+}
+
+#heading h2{
+    text-align: center;
+    color: #79AEF2;
+}
+
+#facts{
+    width: 70%;
+    margin:0 auto; /*this will center the somethign in the page */
+    padding: 1%; 
+    border-radius: 5px; 
+}
+#facts p {
+    font-size: 1.25em;
+    color: #4F7302; 
+}
+#facts img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px; 
+    border: 2px solid black;
+    padding: 8px; 
+    background: black;
+    box-shadow: 0 12px 24px -8px black;
+    
+}
+

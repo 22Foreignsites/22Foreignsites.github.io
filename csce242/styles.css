@@ -1,0 +1,39 @@
+body{
+    font-family: 'Times New Roman', Times, sans-serif;
+    background: url("images/tree.jpg");
+
+}
+#repo a:visited{
+    color:#C4865F
+}
+#repo a:link{
+    color:#D0D9DE;
+}
+#repo a{
+    text-decoration: none;
+}
+/* Typography */
+#class-name h1{
+    color: #D0D9DE;
+}
+#assignments h2{
+    color: #D0D9DE;
+}
+#webcontent p{
+    color: #D0D9DE;
+}
+#repo p{
+    color: #D0D9DE;
+}
+#assignments ol{
+    color: #D0D9DE;
+}
+#assignments a:link {
+    color: #D0D9DE;
+}
+#assignments a:visited {
+    color: #C4865F;
+}
+#assignments a{
+    text-decoration: none;
+}
