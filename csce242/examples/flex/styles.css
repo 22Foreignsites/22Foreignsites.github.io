@@ -10,6 +10,7 @@ body{
     background: #59530247;
     border-radius: 5px;
     padding: 5px;
+    box-sizing: border-box;
 }
 
 #main-header{
@@ -19,7 +20,19 @@ body{
     padding: 5px;
 }
 
+.columns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
 
+.columns img {
+    width: 300px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+}
 
 /*Main Navigation*/
 #main-nav ul{
