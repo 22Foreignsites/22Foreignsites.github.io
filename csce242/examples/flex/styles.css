@@ -1,0 +1,89 @@
+/*Compare yours to portias code because you don't have everyhting*/
+body{
+    background: #A0DBF2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#content{
+    width:95%;
+    margin:auto;
+    background: #59530247;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#main-header{
+    background-color: #595302;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+
+/*Main Navigation*/
+#main-nav ul{
+    list-style: none; /* removes the bullets */
+    padding-left: 0;
+}
+
+#main-nav li{
+    border-bottom: 1px solid white;
+}
+
+#main-nav li:first-child{
+    border-top: 1px solid white;
+}
+
+#main-nav a{
+    color: white;
+    padding: 10px 5px;
+    display: block; /* makes the whole area clickable */
+    text-decoration: none; /*remove underline*/
+}
+
+#main-nav a:hover{
+    background-color: white;
+    color: #595302;
+}
+
+/*Typography*/
+h1{
+    text-align: center;
+}
+
+/* Larger Devices */
+@media only screen and (min-width: 768px) {
+  body{
+        background-image: url(images/catree.jpg);
+        background-size: cover;
+    }
+    #content{
+        width: 70%;
+    }
+
+    /*Columns*/
+    .columns{
+        display:flex;
+
+    }
+
+    /*Main Navigation*/
+    #main-nav li{
+        flex:1;
+    }
+    #main-nav li, #main-nav li:first-child{
+        border:none;
+    }
+
+    #main-nav a{
+        text-align: center;
+        padding:5px;
+    }
+
+    #main-nav a:hover{
+        background: #595302;
+        color: white;
+        border-bottom:1px solid white;
+    }
+}
