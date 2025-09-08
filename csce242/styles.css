@@ -18,10 +18,12 @@ body{
 #main-nav ul{
     list-style: none; /* removes the bullets */
     padding-left: 0;
-    
-
 }
-
+#p-main-nav
+ ul{
+    list-style: none; /* removes the bullets */
+    padding-left: 0;
+}
 #main-nav li{
     background: #D0D9DE;
     border-bottom: 1px solid #D0D9DE;
@@ -36,12 +38,37 @@ body{
     text-align: center;
     
 }
+#p-main-nav li{
+    background: #D0D9DE;
+    border-bottom: 1px solid #D0D9DE;
+    padding: 16px;
+    border-radius: 4px;
+    width: 320px;
+    box-sizing: border-box;
+    text-align: left;
+     margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.3em;
+    text-align: center;
+    
+}
+
 
 #main-nav li:first-child{
     border-top: 1px solid white;
 }
+#p-main-nav li:first-child{
+    border-top: 1px solid white;
+}
 
 #main-nav a{
+    color: white;
+    padding: 10px 5px;
+    display: block; /* makes the whole area clickable */
+    text-decoration: none; /*remove underline*/
+    text-align: center;
+}
+#p-main-nav a{
     color: white;
     padding: 10px 5px;
     display: block; /* makes the whole area clickable */
@@ -53,12 +80,29 @@ body{
     text-align: center;
     color: #C4865F;  
 }
+#p-main-nav p{
+    text-align: center;
+    color: #C4865F;  
+}
 
 #main-nav a:hover{
     background-color: #C4865F;
     color: white !important;
 }
+#p-main-nav a:hover{
+    background-color: #C4865F;
+    color: white !important;
+}
 #main-nav .columns{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+#p-main-nav .columns{
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -76,7 +120,15 @@ body{
     height: 150px;
     background: #D0D9DE;
 }
-
+#p-main-nav .columns img{
+    display: block;
+    margin: 0 auto 16px auto;
+    width: 100%;
+    height: auto;
+    width: 300px;
+    height: 150px;
+    background: #D0D9DE;
+}
 /* Typography */
 #class-name h3{
     color: #D0D9DE;
@@ -86,6 +138,11 @@ body{
     margin-bottom: 12px;
 }
 #assignments h2{
+    color: #D0D9DE;
+    text-align: center;
+    margin-top: 0;
+}
+#projects h2{
     color: #D0D9DE;
     text-align: center;
     margin-top: 0;
@@ -104,15 +161,22 @@ body{
 #assignments ol{
     color: #D0D9DE;
 }
-#assignments a:link {
+#assignments ol{
+    color: #D0D9DE;
+}
+#projects a:link {
     color: #C4865F;
 }
 #assignments a:visited {
     color: #C4865F;
 }
-#assignments a{
+#assignments a:visited {
+    color: #C4865F;
+}
+#projects a{
     text-decoration: none;
 }
+
 @media only screen and (min-width: 768px) {
     body{
     font-family: 'Times New Roman', Times, sans-serif;
@@ -131,8 +195,30 @@ body{
     padding: 0;
     list-style: none;
 }
-
+#p-main-nav .columns {
+    /* background: #e3e8f7; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 32px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
 #main-nav .columns li {
+    background: #e3e8f7;
+    padding: 16px;
+    border-radius: 4px;
+    width: 320px;
+    box-sizing: border-box;
+    text-align: left;
+     margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.3em;
+    text-align: center;
+}
+#p-main-nav .columns li {
     background: #e3e8f7;
     padding: 16px;
     border-radius: 4px;
@@ -152,8 +238,20 @@ body{
     height: 150px;
     background: #aaa;
 }
+#p-main-nav .columns img {
+    display: block;
+    margin: 0 auto 16px auto;
+    width: 300px;
+    height: 150px;
+    background: #aaa;
+}
 
 #main-nav .columns p {
+    margin: 0;
+    font-size: 1em;
+    color: #C4865F;
+}
+#p-main-nav .columns p {
     margin: 0;
     font-size: 1em;
     color: #C4865F;
@@ -162,14 +260,30 @@ body{
 #main-nav li{
     flex:1;
 } 
+#p-main-nav li{
+    flex:1;
+} 
  #main-nav li:first-child{
     border:none;
 }
+ #p-main-nav li:first-child{
+    border:none;
+}
+
 #main-nav a{
     text-align: center;
     padding: 5px;
 }
+#p-main-nav a{
+    text-align: center;
+    padding: 5px;
+}
 #main-nav a:hover{
+    background: #C4865F;
+    color: white;
+    border-bottom:1px solid white;
+}
+#p-main-nav a:hover{
     background: #C4865F;
     color: white;
     border-bottom:1px solid white;

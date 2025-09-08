@@ -1,6 +1,11 @@
 /*Compare yours to portias code because you don't have everyhting*/
+:root{
+    --primary-color: /*this from now on for colors*/ #A0DBF2;
+    --secondary-color: #595302;
+
+}
 body{
-    background: #A0DBF2;
+    background: var(--primary-color); /*this from now on for colors*/
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -14,10 +19,32 @@ body{
 }
 
 #main-header{
+    background: var(--primary-color);
     background-color: #595302;
     color: white;
     border-radius: 5px;
     padding: 5px;
+    position: relative; /*this allows us to position the h1 inside of it*/
+}
+
+/*Showcase*/
+#showcase{
+    position: relative; /*this puts this in the top left to its own window*/
+    /*you need to do this, and then move the p element and make the p element absolute*/
+}
+#showcase p{
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 10px;
+    width:fit-content; /* Take up only as much width as needed */
+    /*Height will be variabled*/
+    position: relative; /*relative to where it would normally be*/
+    top:-50;
+    left:0;
+    
+    /*nothing happened becuase we have to move it*//*Going to position itself relative to the window*/
+    /* bottom:0; /* this is moving it*/ 
+    /* left:0; */ 
 }
 #main-content section, #main-content aside{
     padding:5px;
@@ -46,11 +73,31 @@ img{
 }
 
 /*Main Navigation*/
-#main-nav ul{
-    list-style: none; /* removes the bullets */
-    padding-left: 0;
+nav{
+    list-style-type: none;
+    padding-left:0;
 }
+nav a{
+    text-decoration: none;
+}
+nav li{
+    text-decoration: none;
+}
+#login-nav{
+    position:absolute;
+    top:2.5%;
+    right:2.5%;
 
+}
+#login-nav a{
+    color: white;
+    padding: 5px;
+    display: block;
+}
+#login-nav a:hover{
+    border-bottom:1px solid white;
+
+}
 #main-nav li{
     border-bottom: 1px solid white;
 }
@@ -63,12 +110,15 @@ img{
     color: white;
     padding: 10px 5px;
     display: block; /* makes the whole area clickable */
-    text-decoration: none; /*remove underline*/
 }
 
 #main-nav a:hover{
     background-color: white;
     color: #595302;
+}
+
+#login-nav a::after{
+    content:"l";
 }
 
 /*Typography*/

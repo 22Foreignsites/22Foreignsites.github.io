@@ -1,0 +1,1188 @@
+/* Custom font for testimonial author */
+.testimonial-author {
+    font-family: 'Georgia', serif;
+    font-size: 0.8em;
+    font-style: italic;
+    color: #ffe4e1; /* Example: light pink, adjust as needed */
+    letter-spacing: 0.5px;
+    display: block;
+    margin-top: 0.5em;
+}
+
+/* Corner title for McCausland College of Arts and Sciences */
+/* Default: bottom left for large screens */
+.college-title-corner {
+    position: absolute;
+    top: auto;
+    left: 0px;
+    bottom: 16px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #73000A;
+    background: rgba(255,255,255,0.85);
+    padding: 8px 24px;
+    border-radius: 4px;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    letter-spacing: 0.5px;
+    display: block;
+}
+
+/* ==========================================================================
+   CSS RESET & BASE STYLES
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #000;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ==========================================================================
+   COMMON COMPONENTS
+   ========================================================================== */
+
+/* Common Button Styles */
+.btn {
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: #73000A;
+    color: #fff;
+    border: 3px solid #fff;
+    padding: 14px 32px;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(128,0,0,0.12);
+}
+
+.btn-primary:hover {
+    background: #a00000;
+}
+
+.btn-secondary {
+    background: #000;
+    color: #fff;
+    border: 3px solid #fff;
+    padding: 12px 32px;
+    font-size: 1.1em;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.btn-secondary:hover {
+    background: #222;
+}
+
+/* Common Section Styles */
+.section {
+    padding: 40px 24px;
+    margin-top: 48px;
+}
+
+.section-centered {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #73000A;
+}
+
+.section-desc {
+    font-size: 1.25em;
+    margin-bottom: 32px;
+    line-height: 1.5;
+}
+
+/* Common Card Style */
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    color: #222;
+}
+
+.card-dark {
+    background: #000;
+    color: #fff;
+}
+
+/* Common Image Styles */
+.img-responsive {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+/* ==========================================================================
+   HEADER & NAVIGATION
+   ========================================================================== */
+
+.main-header {
+    background: #000;
+    color: #fff;
+    width: 100%;
+    font-family: Georgia, serif;
+}
+
+/* Top Bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 2em;
+}
+
+.top-links {
+    display: flex;
+    gap: 1.5em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    justify-content: flex-end;
+}
+
+.top-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    justify-content: flex-end;
+}
+
+.top-links a:hover {
+    text-decoration: underline;
+}
+
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+}
+
+.sc-logo {
+    height: 40px;
+}
+
+.sc-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Navigation Bar */
+.nav-bar {
+    display: flex;
+    align-items: center;
+    background: #73000A;
+    padding: 0.7em 2em;
+    justify-content: flex-end;
+}
+
+.college-title-main {
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    margin-left: 2em;
+    
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 2em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav > ul > li > a {
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5em 0.7em;
+    border-radius: 3px;
+}
+
+.main-nav > ul > li > a:hover {
+    background: #73000A;
+}
+
+/* Dropdown Menus */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 2.2em;
+    left: 0;
+    background: #fff;
+    color: #73000A;
+    min-width: 180px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    border-radius: 0 0 6px 6px;
+    z-index: 10;
+    padding: 0.5em 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 0.5em 1.2em;
+}
+
+.dropdown-menu a {
+    color: #73000A;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background: #f5f5f5;
+}
+
+.search-btn {
+    background: #fff;
+    color: #73000A;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.3em;
+    padding: 0.4em 0.8em;
+    margin-left: 2em;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background: #f5f5f5;
+}
+
+/* Mobile Menu (hidden by default) */
+.menu {
+    display: none;
+    background: #111;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    border-bottom: 1px solid #333;
+    padding: 1em;
+    font-size: 1em;
+}
+
+.menu li.tools {
+    background: #444;
+    color: #ccc;
+    font-size: 0.95em;
+    padding: 0.7em 1em;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background: #222;
+}
+
+.hero-bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+/* .hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255,255,255,0.85);
+    padding: 1.5em 3em;
+    border-radius: 8px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    text-align: center;
+} */
+
+.hero-title {
+    color: #73000A;
+    font-size: 2.5em;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   MAIN CONTENT SECTIONS
+   ========================================================================== */
+
+/* College Info */
+.college-info {
+    text-align: center;
+    padding: 2em 1em 1em 1em;
+    background: #fff;
+    color: #000;
+}
+
+.college-title {
+    color: #73000A;
+    font-size: 2em;
+    margin: 0.5em 0;
+    font-family: Georgia, serif;
+}
+
+.college-desc {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+/* Future Info */
+.future-info {
+    background: #73000A;
+    color: #fff;
+    padding: 2em 1em;
+    text-align: center;
+}
+.future-flex {
+  display: flex;
+  align-items: stretch;
+  gap: 2em; /* space between image and text */
+}
+.future-img {
+    width: 50%;
+    height: auto;
+}
+
+.future-content {
+    flex: 1 1 0;
+    max-width: 700px;
+    margin: 0 auto 1em auto;
+}
+
+.future-content h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.future-content p {
+    font-size: 1.2em;
+}
+
+/* Program Info */
+.program-info {
+    background: #eee;
+    text-align: center;
+    padding: 3em 1em 2em 1em;
+    color: #222;
+}
+
+.program-title {
+    color: #73000A;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.program-desc {
+    font-size: 1.3em;
+    max-width: 700px;
+    margin: 0 auto 2em auto;
+}
+
+.program-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+}
+
+/* Impact Section */
+.impact-info {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.impact-img-container {
+    position: relative;
+    display: flex;
+    /* width: 100%;
+    min-height: 400px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center; */
+}
+
+.impact-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.impact-text {
+    position: absolute;
+    top: 50%;
+    right: 80px;
+    transform: translateY(-50%);
+    width: 40%;
+    background: rgba(0,0,0,0.95);
+    padding: 2em 1em 1em 1em;
+    text-align: right;
+}
+
+.impact-text h2 {
+    font-size: 2.3em;
+    font-weight: bold;
+    margin: 0 0 0.5em 0;
+}
+
+.impact-text p {
+    font-size: 1.2em;
+    margin: 0;
+    color: #fff;
+}
+
+/* Research Section */
+.research-section {
+    background: #73000A;
+    color: #fff;
+    text-align: center;
+    padding: 3em 1em 2em 1em;
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.testimonial-img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 2em;
+    box-shadow: 0 0 0 10px #73000A, 0 2px 12px rgba(0,0,0,0.2);
+    background: #fff;
+}
+
+.testimonial-quote {
+    position: relative;
+    font-size: 1.5em;
+    font-family: Georgia, serif;
+    max-width: 700px;
+    margin: 0 auto 1em auto;
+    color: #fff;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.quote-mark {
+    font-size: 4em;
+    color: #222;
+    position: absolute;
+    font-family: Georgia, serif;
+}
+
+.quote-mark.left {
+    left: -0.7em;
+    top: -0.3em;
+}
+
+.quote-mark.right {
+    right: -0.7em;
+    bottom: -0.3em;
+}
+
+.quote-text {
+    display: inline;
+    margin: 0 0.5em;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Georgia', serif;
+    font-size: 0.5em;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    display: block;
+}
+
+/* Network Section */
+.network-section {
+    background: #295057;
+    color: #fff;
+    text-align: left;
+    padding: 3em 1em 2em 1em;
+}
+
+.network-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+}
+
+.network-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    line-height: 1.1;
+}
+
+.network-desc {
+    font-size: 1.3em;
+    max-width: 700px;
+    margin: 0 0 2em 0;
+}
+
+.network-img {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 2em auto;
+    object-fit: cover;
+    height: 600px;
+}
+
+/* ==========================================================================
+   SPECIAL SECTIONS (SVAD, Civic, Thinkers)
+   ========================================================================== */
+
+.svad-section,
+.civic-section, .thinkers-section {
+    padding: 40px 24px;
+    margin-top: 48px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    color: #222;
+    text-align: left;
+}
+
+/* Thinkers Hero Section Styles */
+.thinkers-hero {
+    background: #000;
+    color: #fff;
+    padding: 3em 1em 2em 1em;
+}
+
+.thinkers-hero-flex {
+    display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.thinkers-hero-content {
+    flex: 1 1 0;
+    max-width: 700px;
+}
+
+.thinkers-hero-title {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    line-height: 1.1;
+}
+
+.thinkers-hero-desc {
+    font-size: 1.3em;
+    margin-bottom: 2em;
+}
+
+.thinkers-hero-btn {
+    display: inline-block;
+    background: #73000A;
+    color: #fff;
+    border: 3px solid #fff;
+    padding: 16px 40px;
+    font-size: 1.3em;
+    font-weight: bold;
+    border-radius: 4px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(128,0,0,0.12);
+    margin-top: 1em;
+    transition: 0.2s;
+}
+
+.thinkers-hero-btn:hover {
+    background: #a00000;
+}
+
+.thinkers-hero-image {
+    flex: 1 1 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thinkers-hero-img-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.thinkers-hero-img {
+    width: 800px;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+.thinkers-hero-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(128,0,0,0.85);
+    border: 3px solid #fff;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.thinkers-hero-play-icon {
+    color: #fff;
+    font-size: 2.5em;
+    margin-left: 8px;
+}
+
+
+.svad-title,
+.civic-title,
+.thinkers-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #73000A;
+}
+
+.svad-desc,
+.civic-desc,
+.thinkers-desc {
+    font-size: 1.25em;
+    margin-bottom: 32px;
+    line-height: 1.5;
+}
+
+.svad-btn,
+.civic-btn,
+.thinkers-btn {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    padding: 18px 0;
+    background: #73000A;
+    color: #fff;
+    border: 3px solid #fff;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(128,0,0,0.12);
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.thinkers-btn {
+    margin-bottom: 32px;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.main-footer {
+    background: #ececec;
+    border-top: 6px solid #73000A;
+    padding: 48px 0 24px 0;
+    margin-top: 48px;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-title {
+    color: #73000A;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.footer-main-btn {
+    @extend .btn, .btn-secondary;
+    margin-bottom: 24px;
+}
+
+.footer-social {
+    margin: 16px 0 24px 0;
+    font-size: 2em;
+    color: #73000A;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.footer-icon {
+    font-family: 'FontAwesome', Arial, sans-serif;
+    font-style: normal;
+}
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid #bbb;
+    margin: 32px 0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px 0;
+}
+
+.footer-links li {
+    margin: 12px 0;
+}
+
+.footer-links a {
+    color: #73000A;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-address {
+    color: #222;
+    font-size: 1.1em;
+    margin-top: 16px;
+}
+
+.footer-college {
+    color: #73000A;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* ==========================================================================
+   BOTTOM NAVIGATION
+   ========================================================================== */
+
+.bottom-nav-section {
+    background: #73000A;
+    color: #fff;
+    padding: 40px 0 32px 0;
+    margin-top: 48px;
+    width: 100%;
+}
+
+.bottom-nav-row {
+    display: flex;
+    gap: 64px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.bottom-nav-group {
+    flex: 1 1 400px;
+    min-width: 320px;
+    margin-bottom: 32px;
+}
+
+.bottom-nav-heading {
+    font-size: 1.4em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.bottom-nav-divider {
+    border: none;
+    border-top: 2px solid #fff;
+    margin-bottom: 18px;
+}
+
+.bottom-nav-columns {
+    display: flex;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+.bottom-nav-columns ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1 1 200px;
+}
+
+.bottom-nav-columns li {
+    font-size: 1.15em;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.bottom-nav-columns li b {
+    font-weight: bold;
+}
+
+.bottom-nav-columns a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: inherit;
+    transition: text-decoration 0.2s;
+}
+
+.bottom-nav-columns a:hover {
+    text-decoration: underline;
+}
+
+
+
+.news-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: none;
+    max-width: 350px;
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1.5rem;
+    text-align: center;
+}
+.news-card img {
+    width: auto;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+.news-card h2 {
+    color: #73000A;
+    margin: 0.5rem 0;
+}
+.news-card p {
+    margin-bottom: 1rem;
+}
+.news-card .btn {
+    margin-top: auto;
+    width: auto;
+}
+
+
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+/* Default styles (for larger screens) */
+.mobile-college-header {
+    display: none; /* Hidden by default on desktop */
+}
+
+.menu {
+    display: none; /* Hidden by default on desktop */
+}
+
+.top-bar, .nav-bar {
+    display: flex;
+     /* Shown by default on desktop */
+}
+
+/* Mobile styles - applies to screens SMALLER than 750px */
+@media (max-width: 749px) {
+    /* Stack image above text in testimonial section on mobile */
+    .testimonial {
+        flex-direction: column;
+        align-items: center;
+    }
+    .testimonial-img {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto 1em auto;
+        height: auto;
+    }
+    .testimonial-quote {
+        max-width: 100%;
+        margin: 0 auto 1em auto;
+        text-align: center;
+    }
+    /* Stack image above text in impact section on mobile */
+    .impact-img-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .impact-img {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto 1em auto;
+        height: auto;
+    }
+    .impact-text {
+        position: static;
+        width: 100%;
+        background: rgba(0,0,0,0.95);
+        padding: 2em 1em 1em 1em;
+        text-align: center;
+        transform: none;
+        right: auto;
+        top: auto;
+    }
+    /* Stack image above text for future-flex containers on mobile */
+    .future-flex {
+        flex-direction: column;
+        gap: 1.5em;
+        align-items: center;
+    }
+    .future-img,
+    .network-img {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .future-content {
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    /* Hide desktop navigation */
+    .top-bar, 
+    .nav-bar {
+        display: none;
+    }
+    
+    /* Hide desktop college title corner */
+    .college-title-corner {
+        display: none;
+    }
+    
+    /* Show mobile college header */
+    .mobile-college-header {
+        display: block;
+        background: #000;
+        color: #fff;
+        padding: 16px;
+        text-align: center;
+        font-family: Georgia, serif;
+    }
+    
+    .mobile-college-title {
+        font-size: 1.8em;
+        font-weight: bold;
+        margin: 0;
+        letter-spacing: 1px;
+        line-height: 1.2;
+    }
+    
+    /* Show mobile menu */
+    .menu {
+        display: block !important;
+        background: #111;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Hide hero section on mobile */
+    .hero-section {
+        display: none;
+    }
+    
+    /* Mobile-specific adjustments */
+    .main-header {
+        padding: 0;
+    }
+    
+    /* Mobile bottom nav adjustments */
+    .bottom-nav-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .bottom-nav-group {
+        min-width: 0;
+    }
+    
+    .bottom-nav-columns {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .bottom-nav-columns ul {
+        width: 100%;
+        margin-bottom: 0;
+        border-bottom: 2px solid #fff;
+        padding-bottom: 0;
+    }
+    
+    .bottom-nav-columns li {
+        font-size: 1.2em;
+        padding: 16px 0 8px 16px;
+        border-bottom: 2px solid #fff;
+        margin-bottom: 0;
+    }
+    
+    .bottom-nav-columns li:last-child {
+        border-bottom: none;
+    }
+
+    .thinkers-hero-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Desktop styles - applies to screens 750px and LARGER */
+@media (min-width: 750px) {
+
+    .mobile-college-title {
+        display: none;
+    }
+
+    .mobile-college-header {
+        display: none;
+    }
+
+    .main-nav {
+        margin-right: 0;
+    }
+    
+    /* Ensure mobile elements are hidden on desktop */
+    .mobile-college-header {
+        display: none;
+    }
+    
+    .menu {
+        display: none !important;
+    }
+    
+.news-card {
+  background: #fff;
+  border-radius: 8px;
+  /* box-shadow: 0 2px 8px rgba(0,0,0,0.08); */
+  max-width: 350px;
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15rem;
+  text-align: center;
+}
+  
+.news-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.news-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.special-btn-row {
+  display: flex;
+  justify-content: center;
+  gap: 3rem; /* space between buttons */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.special-btn-row .svad-btn,
+.special-btn-row .civic-btn,
+.special-btn-row .thinkers-btn {
+  margin: 0;
+  width: 100%;
+  max-width: 600px;
+}
+}
