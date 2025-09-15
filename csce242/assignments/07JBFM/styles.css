@@ -1,0 +1,81 @@
+body{
+    background-color: #f6e7d7;
+    color: #4f2c1d;        /* dark brown for text */
+
+}
+
+h1, h2{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.row{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+
+}
+.box1, .box2, .box3{
+    background-color: #e09f3e;
+    border: 1px solid #a44a3f;
+    text-align: center;
+    flex: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.center-box {
+    display: flex; /*not the problem*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+#ST{
+    text-align: left;
+}
+
+/* Staircase for Sun */
+
+.sun-title {
+  margin-left: -2px;
+}
+.sun1 { margin-left: 10px; }
+.sun2 { margin-left: 20px; }
+.sun3 { margin-left: 30px; }
+
+/*Button disappearing*/
+#btn-click-me {
+  font-size: 1.17em; /* h3 default size */
+  font-weight: bold; /* h3 default boldness */
+  background: none;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  padding: 0;
+  cursor: pointer;
+  padding-top: 20px; 
+}
+
+/* Box 3 */
+#weather-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover; /* keeps aspect ratio and fills the box */
+}
+
+@media (min-width: 900px) {
+  .row {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start; /* or center if you want vertical centering */
+    gap: 40px; /* space between boxes, adjust as needed */
+  }
+  .box1, .box2, .box3 {
+    width: 300px;      /* fixed width for each box */
+    min-height: 350px; /* adjust height as needed */
+    margin: 0;
+  }
+}

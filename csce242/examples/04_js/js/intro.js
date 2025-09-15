@@ -19,6 +19,23 @@
 
  
 
- document.getElementById("btn-click-me").onclick = () =>{
-    console.log("Hello world");
+ document.getElementById("btn-click-me").onclick = (event) =>{ 
+    document.getElementById("p-welcome").innerHTML = "Hello World";
+    //document.getElementById("btn-click-me").classList.add("clicked"); //why does this work, like what does the button clicked turn black, is clicked not just the name of the thing, 
+  event.currentTarget.classList.add("clicked"); //why don't we need the console log anymore , current target is the button that was clicked
  };
+
+ document.getElementById("btn-click-sad").onclick = (event) =>{
+   const pFeeling = document.getElementById("p-sad");
+  pFeeling.innerHTML = "I am sad";
+   pFeeling.classList.add("Sad");
+   event.currentTarget.classList.add("clicked");
+}
+
+
+ document.getElementById("btn-click-clear").onclick = (event) =>{
+   const pFeeling = document.getElementById("p-clear");
+  pFeeling.innerHTML = "I am clear";
+   pFeeling.classList.add("Clear");
+   event.currentTarget.classList.add("clicked");
+}

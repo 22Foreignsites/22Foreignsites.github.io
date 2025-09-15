@@ -1,0 +1,616 @@
+/* Hoodies Page Styles */
+.hoodies-row {
+	display: flex;
+	gap: 40px;
+	justify-content: center;
+	margin: 40px 0 0 0;
+}
+.hoodies-card {
+	background: #fff;
+	border-radius: 4px;
+	box-sizing: border-box;
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 20px;
+}
+.hoodies-img {
+	width: 200px;
+	height: 120px;
+	object-fit: cover;
+	filter: grayscale(100%);
+	border: 2px solid #000;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+.hoodies-label {
+	font-size: 1.1em;
+	color: #000;
+	text-align: center;
+	margin-bottom: 5px;
+}
+.hoodies-price {
+	font-size: 1.1em;
+	color: #000;
+	text-align: center;
+}
+/* Hats Page Styles */
+.hats-row {
+	display: flex;
+	gap: 40px;
+	justify-content: center;
+	margin: 40px 0 0 0;
+}
+.hats-card {
+	background: #fff;
+	border-radius: 4px;
+	box-sizing: border-box;
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 20px;
+}
+.hats-img {
+	width: 200px;
+	height: 120px;
+	object-fit: cover;
+	filter: grayscale(100%);
+	border: 2px solid #000;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+.hats-label {
+	font-size: 1.1em;
+	color: #000;
+	text-align: center;
+	margin-bottom: 5px;
+}
+.hats-price {
+	font-size: 1.1em;
+	color: #000;
+	text-align: center;
+}
+/* Pants Page Styles */
+.pants-row {
+	display: flex;
+	gap: 40px;
+	justify-content: center;
+	margin: 40px 0 0 0;
+}
+.pants-card {
+	background: #fff;
+	border-radius: 4px;
+	box-sizing: border-box;
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 20px;
+}
+.pants-img {
+	width: 200px;
+	height: 120px;
+	object-fit: cover;
+	filter: grayscale(100%);
+	border: 2px solid #000;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+.pants-label {
+	font-size: 1.1em;
+	color: #000;
+	text-align: center;
+	margin-bottom: 5px;
+}
+.pants-price {
+	font-size: 1.1em;
+	color: #000;
+	text-align: center;
+}
+/* Shirts Page Styles */
+.shirts-row {
+	display: flex;
+	gap: 40px;
+	justify-content: center;
+	margin: 40px 0 0 0;
+}
+.shirts-card {
+	background: #fff;
+	border-radius: 4px;
+	box-sizing: border-box;
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 20px;
+}
+.shirts-img {
+	width: 200px;
+	height: 120px;
+	object-fit: cover;
+	filter: grayscale(100%);
+	border: 2px solid #000;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+.shirts-label {
+	font-size: 1.1em;
+	color: #000;
+	text-align: center;
+	margin-bottom: 5px;
+}
+.shirts-price {
+	font-size: 1.1em;
+	color: #000;
+	text-align: center;
+}
+/* Clothes Page Styles */
+.clothes-categories {
+	margin: 40px 0 0 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.clothes-row {
+	display: flex;
+	gap: 40px;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+.clothes-col {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.clothes-img {
+	width: 200px;
+	height: 120px;
+	object-fit: cover;
+	filter: grayscale(100%);
+	border: 2px solid #000;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+.clothes-label {
+	font-size: 1.5em;
+	color: #000;
+	text-align: center;
+}
+.popular-section {
+	margin: 40px 0 80px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.popular-btn {
+	background: #888;
+	color: #fff;
+	padding: 20px;
+	font-size: 1.2em;
+	border: none;
+	width: 400px;
+	text-align: center;
+	margin-bottom: 30px;
+	border-radius: 4px;
+}
+.popular-row {
+	display: flex;
+	gap: 40px;
+	justify-content: center;
+}
+.popular-card {
+	background: #fff;
+	border-radius: 4px;
+	box-sizing: border-box;
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 20px;
+}
+.popular-img {
+	width: 200px;
+	height: 120px;
+	object-fit: cover;
+	filter: grayscale(100%);
+	border: 2px solid #000;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+.popular-label {
+	font-size: 1.1em;
+	color: #000;
+	text-align: center;
+	margin-bottom: 5px;
+}
+.popular-price {
+	font-size: 1.1em;
+	color: #000;
+	text-align: center;
+}
+/* Volunteer Page Styles */
+.volunteer-section {
+	margin: 40px 0 80px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+.volunteer-row {
+	display: flex;
+	gap: 40px;
+	justify-content: center;
+}
+.volunteer-card {
+	background: #fff;
+	border-radius: 4px;
+	box-sizing: border-box;
+	width: 320px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 0 30px 0;
+}
+.volunteer-title {
+	font-size: 2em;
+	font-weight: 400;
+	color: #000;
+	margin: 20px 0 10px 0;
+	text-align: center;
+}
+.volunteer-img {
+	width: 300px;
+	height: 180px;
+	object-fit: cover;
+	filter: grayscale(100%);
+	border: 2px solid #000;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+.volunteer-text {
+	font-size: 1.1em;
+	color: #000;
+	margin-bottom: 20px;
+	text-align: left;
+	padding: 0 10px;
+}
+.volunteer-btn {
+	background: #888;
+	color: #fff;
+	font-size: 1.2em;
+	border: none;
+	border-radius: 4px;
+	padding: 12px 0;
+	width: 90%;
+	cursor: pointer;
+	margin-top: 10px;
+	transition: background 0.2s;
+}
+.volunteer-btn:hover {
+	background: #222;
+}
+/* Merch Page Styles */
+.merch-section {
+	margin: 40px 0 80px 0;
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+	align-items: stretch;
+}
+.merch-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 40px;
+	margin: 0 10vw;
+}
+.merch-title {
+	font-size: 3em;
+	font-weight: 400;
+	color: #000;
+	text-align: center;
+	flex: 1;
+}
+.merch-img {
+	width: 600px;
+	height: 180px;
+	object-fit: cover;
+	filter: grayscale(100%);
+	border: 2px solid #000;
+	border-radius: 4px;
+}
+/* Scholarship Page Styles */
+.scholarship-section {
+	margin: 40px 10vw 0 10vw;
+	display: flex;
+	align-items: center;
+}
+.scholarship-btn {
+	background: #888;
+	color: #fff;
+	padding: 20px;
+	font-size: 1.2em;
+	border: none;
+	width: 350px;
+	text-align: center;
+	margin-right: 20px;
+	border-radius: 4px;
+}
+.scholarship-desc {
+	flex: 1;
+	font-size: 1.1em;
+	color: #000;
+}
+.scholarship-cards {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	margin: 40px 10vw 80px 10vw;
+}
+.scholarship-card {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+}
+.scholarship-title {
+	width: 120px;
+	font-weight: bold;
+	font-size: 1.1em;
+	text-align: left;
+}
+.scholarship-card img {
+	width: 300px;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 4px;
+	filter: grayscale(100%);
+	border: 2px solid #000;
+}
+.scholarship-text {
+	flex: 1;
+	font-size: 1em;
+	color: #000;
+}
+/* Contact Page Styles */
+.contact-section {
+	margin: 40px 10vw 0 10vw;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.contact-btn {
+	background: #222;
+	color: #fff;
+	padding: 20px;
+	font-size: 1.2em;
+	border: none;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 10px;
+	border-radius: 4px;
+}
+.contact-desc {
+	margin-bottom: 20px;
+	font-size: 1.1em;
+	color: #000;
+}
+.contact-form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.form-row {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.form-label {
+	background: #888;
+	color: #fff;
+	padding: 18px 30px;
+	width: 180px;
+	font-size: 1.1em;
+	border-radius: 4px 0 0 4px;
+	margin-right: 0;
+	text-align: left;
+}
+.form-row input {
+	flex: 1;
+	padding: 18px;
+	font-size: 1em;
+	border: 1px solid #000;
+	border-radius: 0 4px 4px 0;
+	background: #fff;
+	color: #000;
+}
+.social-section {
+	margin: 40px 10vw 80px 10vw;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.social-btn {
+	background: #222;
+	color: #fff;
+	padding: 20px;
+	font-size: 1.2em;
+	border: none;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 10px;
+	border-radius: 4px;
+}
+.social-desc {
+	margin-bottom: 20px;
+	font-size: 1.1em;
+	color: #000;
+}
+.social-cards {
+	display: flex;
+	gap: 40px;
+}
+.social-card {
+	background: #888;
+	color: #fff;
+	padding: 30px 50px;
+	font-size: 1.1em;
+	border-radius: 4px;
+	text-align: center;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	background: #fff;
+	color: #000;
+}
+
+.navbar {
+	display: flex;
+	justify-content: center;
+	background: #000;
+	color: #fff;
+	padding: 10px 0;
+	position: relative;
+	z-index: 2;
+}
+.navbar ul {
+	list-style: none;
+	display: flex;
+	gap: 40px;
+	margin: 0;
+	padding: 0;
+}
+.navbar li {
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #fff;
+	transition: color 0.2s;
+}
+.navbar li:hover {
+	color: #bbb;
+}
+.navbar.top {
+	position: sticky;
+	top: 0;
+}
+.navbar.bottom {
+	/* position: fixed; */
+	bottom: 0;
+	width: 100%;
+}
+header {
+	text-align: center;
+	margin-top: 20px;
+}
+.header-img img {
+	width: 100%;
+	/* max-width: 600px; */
+	height: auto;
+	margin: 20px auto;
+	display: block;
+	filter: grayscale(100%);
+	border-radius: 5px;
+}
+
+.starter{
+    text-align:left;
+    margin-left: 180px;
+}
+
+.big-box {
+    background: #888;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.about-section, .mission-section {
+	display: flex;
+	align-items: center;
+	margin: 30px 10vw 0 10vw;
+}
+.about-btn, .mission-btn {
+	background: #222;
+	color: #fff;
+	padding: 20px;
+	font-size: 1.2em;
+	border: none;
+	width: 250px;
+	text-align: center;
+	margin-right: 20px;
+	border-radius: 4px;
+}
+.about-text, .mission-text {
+	flex: 1;
+	font-size: 1.1em;
+	background: #fff;
+	color: #000;
+	padding: 20px;
+	border-radius: 4px;
+	border: 1px solid #000;
+}
+
+
+.cards {
+    padding: 20px;
+	display: flex;
+    justify-content: center;
+	align-items: center;
+	gap: 30px;
+}
+.card{
+    background: #888;
+    border-radius: 1px solid #000;
+    box-sizing: border-box;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    height: 270px;
+    margin-bottom:150px;
+}
+
+.card2{
+    background: #888;
+    border-radius: 1px solid #000;
+    box-sizing: border-box;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    height: 270px;
+    margin-top: 150px;
+}
+
+.card-title {
+	width: 120px;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+.card img {
+	width: 200px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 4px;
+	filter: grayscale(100%);
+	border: 1px solid #000;
+}
+.card-text {
+	flex: 1;
+	font-size: 1em;
+	color: #000;
+}
+
+.quick-facts{
+	text-align: center;
+	list-style-position: inside;
+    background-color: #888;
+}
+
+
