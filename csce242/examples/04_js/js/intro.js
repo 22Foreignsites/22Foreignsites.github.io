@@ -39,3 +39,24 @@
    pFeeling.classList.add("Clear");
    event.currentTarget.classList.add("clicked");
 }
+
+/* Counter */
+
+let counter = 0;
+let counterInterval;
+const countP = document.getElementById("p-count");
+
+document.getElementById("btn-count-start").onclick = ()=>{
+  counterInterval = setInterval(()=>{
+    counter++;
+    countP.innerHTML = counter;
+  }, 1000);
+}
+document.getElementById("btn-count-stop").onclick = ()=>{
+  clearInterval(counterInterval);
+}
+
+document.getElementById("btn-donations").onclick = ()=>{
+  const donation = document.getElementById("txt-donation").value;
+  const errorSpan = document.getElementById("donation-error");
+}

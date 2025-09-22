@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+    <head> 
+       <title>Assignment 8</title>
+         <link rel="stylesheet" href="styles.css">
+         <div class = "titles"> 
+            <h1>Assignment 8</h1>
+            <h2>If statements</h2>
+        </div>
+    </head>
+    <body>
+                <nav class="navbar">
+                    <button id="menuToggle" aria-label="Toggle menu">
+                        <span id="arrow">&#9660;</span> Menu
+                    </button>
+                    <ul id="menuItems" class="menu-items">
+                        <li><a href="#" id="showPlant">Exercise 1</a></li>
+                        <li><a href="#" id="showClock">Exercise 2</a></li>
+                    </ul>
+                    <div class="exercises-nav" id="exercisesNav">
+                        <a href="#" id="showPlantLarge">Exercise 1</a><a href="#" id="showClockLarge">Exercise 2</a>
+                    </div>
+                </nav>
+    <div class = "plant" id="plantSection">
+           <p>How many days has it been since watering your plant?</p>
+           <div class="slidecontainer">
+            <p id="demo">You don't water your plants</p>      
+            <input type="range" id="imgSlider" min="0" value="0">
+            <img id="displayImg" src="https://dummyimage.com/600x400/000/fff" width="300">
+        </div>
+        </div>
+    <div class = "clock" id="clockSection" style="display:none;">
+            <p>This is the Digital Clock</p>
+            <p id="digitalClock"></p>
+        </div>
+    <script src="js/intro.js"></script>
+    <script src="js/toggle-nav.js"></script>
+    </body>
+</html>
