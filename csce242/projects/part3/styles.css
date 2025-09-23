@@ -243,7 +243,7 @@
 	justify-content: center;
 }
 .volunteer-card {
-	background: #fff;
+	background: #A6806A;
 	border-radius: 4px;
 	box-sizing: border-box;
 	width: 320px;
@@ -285,14 +285,30 @@
 	width: 90%;
 	cursor: pointer;
 	margin-top: 10px;
-	transition: background 0.2s;
 }
 .volunteer-btn:hover {
 	background: #222;
 }
 /* Merch Page Styles */
+.merch-header{
+	position: relative;
+	text-align: center;
+	/* margin-top: 20px; */
+	background-color:#A9C2D9;
+	height: 100px;
+
+}
+.merch-text{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
+	height: auto;
+}
+
 .merch-section {
-	margin: 40px 0 80px 0;
+	/* margin: 40px 0 80px 0; */
 	display: flex;
 	flex-direction: column;
 	gap: 60px;
@@ -303,7 +319,8 @@
 	align-items: center;
 	justify-content: space-between;
 	gap: 40px;
-	margin: 0 10vw;
+	background-color: #A6806A;
+	/* margin: 0 10vw; */
 }
 .merch-title {
 	font-size: 3em;
@@ -320,10 +337,14 @@
 	border: 2px solid #000;
 	border-radius: 4px;
 }
+
+/* .why-y-clothes{
+	background-color: #A9C2D9;
+} */
 .why-clothes{
 	/* width: 100%; */
 	text-align: left;
-	background-color: #888;
+	background-color: #A6806A;
 	margin: 50px;
 	display: flex;
 	flex-direction: row;
@@ -492,9 +513,9 @@ html, body {
 .navbar {
 	display: flex;
 	justify-content: center;
-	background: #000;
+	background: #A9C2D9;
 	color: #fff;
-	padding: 10px 0;
+	padding: 0px 0;
 	position: relative;
 	z-index: 2;
 }
@@ -509,12 +530,13 @@ html, body {
 .navbar li {
 	cursor: pointer;
 	font-size: 1.2em;
-	color: #fff;
+	color: #A9C2D9;
 	transition: color 0.2s;
 }
 .navbar li:hover {
 	color: #bbb;
 }
+
 .navbar.top {
 	position: sticky;
 	top: 0;
@@ -525,26 +547,61 @@ html, body {
 	width: 100%;
 }
 header {
+	position: relative;
 	text-align: center;
-	margin-top: 20px;
+	/* margin-top: 20px; */
+	background-color:#A9C2D9;
 }
 .header-img img {
 	width: 100%;
-	/* max-width: 600px; */
-	height: auto;
-	margin: 20px auto;
+	height: 300px;
+	/* margin: 20px auto; */
 	display: block;
-	filter: grayscale(100%);
+	/* filter: grayscale(100%); */
 	border-radius: 5px;
+	object-fit:cover;
+	margin: 0;
+}
+.img-text {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  color: white; /* Or any color that stands out */
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 80px;
+  text-align: center;
 }
 
 .starter{
-    text-align:left;
-	margin-left: 10px;
+    /* text-align:left; */
+	/* margin-left: 10px; */
+	position: relative;
+	background-color: #A9C2D9;
+	height: 100px;
+	width: 100%;
+	/* margin: 0; */
+	/* width: 100%; */
+}
+
+.box-starter h2, .box-starter p {
+	text-align: left;
+	margin-left: 150px;
+	background: #A9C2D9; /* remove background so .starter shows through */	
+}
+
+.box-starter  {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
+	height: auto;
 }
 
 .big-box {
-    background: #888;
+    background: #A6806A;
     padding-bottom: 30px;
     padding-top: 10px;
 }
@@ -583,10 +640,11 @@ header {
 	align-items: center;
 	gap: 30px;
 	flex-wrap: wrap;
+	background-color: #A9C2D9;
 }
 .card{
-    background: #888;
-    border-radius: 1px solid #000;
+    background: #192A40;
+    border-radius: 1px solid #fff;
     box-sizing: border-box;
     width: 500px;
     display: flex;
@@ -599,8 +657,8 @@ header {
 }
 
 .card2{
-    background: #888;
-    border-radius: 1px solid #000;
+    background: #192A40;
+    border-radius: 1px solid #fff;
     box-sizing: border-box;
     width: 500px;
     display: flex;
@@ -616,19 +674,20 @@ header {
 	width: 120px;
 	font-weight: bold;
 	font-size: 1.1em;
+	color: #fff;
 }
 .card img {
-	width: 200px;
-	height: 100px;
+	width: 300px;
+	height: 150px;
 	object-fit: cover;
 	border-radius: 4px;
-	filter: grayscale(100%);
 	border: 1px solid #000;
+	object-fit: contain;
 }
 .card-text {
 	flex: 1;
 	font-size: 1em;
-	color: #000;
+	color: #fff;
 }
 
 .p-quick-facts{
@@ -640,7 +699,7 @@ header {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background-color: #888;
+	background-color: #A6806A;
 	border-radius: 8px;
 	box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 	padding: 50px;
@@ -668,7 +727,7 @@ header {
 	.navbar {
 	display: flex;
 	justify-content: center;
-	background: #000;
+	background: #A9C2D9;
 	color: #fff;
 	padding: 10px 0;
 	position: relative;
@@ -684,12 +743,12 @@ header {
 .navbar li {
 	cursor: pointer;
 	font-size: 1.2em;
-	color: #fff;
+	color: #A9C2D9;
 	transition: color 0.2s;
 }
 .starter{
     text-align:left;
-    margin-left: 180px;
+    /* margin-left: 180px; */
 }
 .about-btn, .mission-btn {
 	background: #222;
