@@ -1,0 +1,259 @@
+
+
+/* Scene container */
+#scene {
+  position: relative;
+  width: 95vw;
+  max-width: 1800px;
+  height: 60vw;
+  max-height: 1100px;
+  min-width: 400px;
+  min-height: 300px;
+  margin: 30px auto;
+  background: #b3dcee;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Sun and Moon */
+.sun, .moon {
+  position: absolute;
+  top: 7%;
+  right: 5%;
+  width: 10%;
+  height: 20%;
+  min-width: 40px;
+  min-height: 40px;
+  max-width: 120px;
+  max-height: 120px;
+  border-radius: 50%;
+}
+.sun {
+  background: #ffd600;
+}
+.moon {
+  background: #fffde4;
+  overflow: hidden;
+}
+
+.moon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 40%;
+  width: 70%;
+  height: 100%;
+  background: #111;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+
+/* Cloud  */
+.cloud {
+  /* position: absolute; */
+  top: 0;
+  /* width: 10%; */
+  /* height: 8%; */
+  /* min-width: 40px; */
+  /* min-height: 20px; */
+  /* background: #fff; */
+  /* border-radius: 40px; */
+  /* opacity: 0.9; */
+
+  width: 350px; height: 120px;
+  background: #f2f9fe;
+  
+  background: #f2f9fe;  /* from the internet, */
+  /* background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f2f9fe), to(#d6f0fd)); */
+  background: -webkit-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+  background: -moz-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+  background: -o-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+  background: linear-gradient(to bottom, #f2f9fe 5%, #d6f0fd 100%);
+
+  border-radius: 100px;
+  position: absolute;
+  /* margin: 180px auto 100px; */
+  margin: 0 auto;
+  left: 40%;
+  transform: translateX(-50%);
+}
+
+.cloud:before, .cloud:after {
+  content: "";
+  position: absolute;
+  background: #fff;
+}
+
+.cloud:after {
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  left: 50px;
+  border-radius: 100px;
+}
+
+.cloud:before {
+  width: 180px;
+  height: 180px;
+  top: -90px;
+  right: 50px;
+  border-radius: 200px;
+}
+
+/* Tree trunk */
+.trunk {
+  position: absolute;
+  width: 4%;
+  height: 18%;
+  min-width: 20px;
+  min-height: 40px;
+  background: #8B5A2B;
+  border-radius: 5px;
+}
+
+/* Tree leaves */
+.leaves {
+  position: absolute;
+  width: 10%;
+  height: 18%;
+  min-width: 40px;
+  min-height: 40px;
+  background: green;
+  border-radius: 50%;
+}
+
+/* --- Simple CSS Bird --- */
+/* Flying Bird-- Litertally a combination of AI, the Internet and Me */
+.bird {
+  position: absolute;
+  top: 25%;
+  left: -150px; /* start off screen */
+  width: 120px;
+  height: 80px;
+  animation: flyAcross 15s linear infinite;
+  z-index: 1000; /* between trees and clouds */
+}
+.bird.night .bird-body,
+.bird.night .bird-head {
+  background: #333;
+}
+.bird.night .bird-wing {
+  background: #222;
+}
+.bird.night .bird-beak {
+  border-left: 20px solid #444;
+}
+.bird.night .bird-eye {
+  background: #111;
+}
+
+/* Wings */
+.bird-wing {
+  position: absolute;
+  width: 70px;
+  height: 38px;
+  background: #6d93c6;
+  border-radius: 50% 60% 60% 50% / 60% 80% 80% 60%;
+  opacity: 0.9;
+  animation: flap 0.6s ease-in-out infinite;
+}
+.bird-wing-left {
+  left: 20px;
+  top: 28px;
+  transform-origin: right center;
+}
+.bird-wing-right {
+  left: 60px;
+  top: 28px;
+  transform-origin: left center;
+}
+
+/* Body */
+.bird-body {
+  position: absolute;
+  left: 28px;
+  top: 28px;
+  width: 64px;
+  height: 48px;
+  background: #6397de;
+  border-radius: 50% 50% 60% 60% / 60% 60% 80% 80%;
+  z-index: 2;
+}
+
+/* Head */
+.bird-head {
+  position: absolute;
+  left: 70px;
+  top: 8px;
+  width: 38px;
+  height: 38px;
+  background: #6397de;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+/* Beak */
+.bird-beak {
+  position: absolute;
+  left: 104px;
+  top: 24px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 20px solid #e6a23c;
+  z-index: 4;
+}
+
+/* Eye */
+.bird-eye {
+  position: absolute;
+  left: 95px;
+  top: 22px;
+  width: 8px;
+  height: 8px;
+  background: #111;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+/* Animations */
+@keyframes flyAcross {
+  0% {
+    left: -150px;
+    /* bottom: 30%; */
+    top: 40%;
+  }
+  50% {
+    left: 50%;
+    top: 40%; /* bird dips near clouds */
+  }
+  100% {
+    left: 110%;
+    top: 35%; /* exits near trees */
+  }
+}
+
+@keyframes flap {
+  0%   { transform: rotate(0deg) scaleY(1); }
+  50%  { transform: rotate(-40deg) scaleY(0.8); }
+  100% { transform: rotate(0deg) scaleY(1); }
+}
+/* --- End CSS Bird --- */
+
+button {
+  display: block;
+  margin: 20px auto 0 auto;
+  padding: 10px 30px;
+  font-size: 1.2em;
+  border-radius: 8px;
+  border: none;
+  background: #b3dcee;
+  color: #222;
+  cursor: pointer;
+}
+button:hover {
+  background: #8ecae6;
+}
