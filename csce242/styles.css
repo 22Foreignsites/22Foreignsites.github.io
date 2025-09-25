@@ -1,3 +1,6 @@
+
+
+
 body{
     font-family: 'Times New Roman', Times, sans-serif;
     background-color: #131826;
@@ -60,6 +63,15 @@ body{
 #p-main-nav li:first-child{
     border-top: 1px solid white;
 }
+
+#main-nav .columns,
+#p-main-nav .columns {
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: center;
+  gap: 32px;
+}
+
 
 #main-nav a{
     color: white;
@@ -300,4 +312,27 @@ body{
         margin-bottom: 12px;
         color: #D0D9DE;   
 }
+/* Scrolling */
+/* .scroll-x {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  width: 100%;
+  padding-bottom: 1em;
+  display: flex;
+}
+.scroll-x ul.columns {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  min-width: max-content;
+  padding: 0;
+  margin: 0;
+  flex-wrap: nowrap;
+}
+.scroll-x ul.columns li {
+  min-width: 300px;
+  max-width: 350px;
+  display: inline-block;
+  vertical-align: top; */
 }
