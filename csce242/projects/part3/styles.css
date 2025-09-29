@@ -517,6 +517,51 @@ body {
 	resize: vertical;
 }
 
+.social-container {
+	display: flex;
+	flex-direction: row;
+	/* gap: 20px; */
+	justify-content: space-between;
+}
+
+.social-2container {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	gap: 420px;
+}
+
+
+.connector {
+    position: absolute;
+    width: 2px;
+    height: 50px; /* adjust height as needed */
+    background: #A6806A;
+    left: 50%;
+    z-index: 1;
+}
+
+.connector-1 {
+    left: 120%; /* adjust to match card position */
+    top: 520px;
+	transform: rotate(90deg); /* adjust to start below first card */
+}
+
+.connector-2 {
+    left: 120%; /* adjust to match card position */
+    top: 20px; /* adjust to start below second card */
+	transform: rotate(90deg);
+}
+
+
+.social-container video{
+	display:flex;
+	width: 100%;
+  max-width: 320px;
+  border-radius: 8px;
+  /* margin-top: 12px; */
+  /* margin-left: 20px; */
+}
 .contact-send-btn {
 	background: #b87c6b;
 	color: #fff;
@@ -545,6 +590,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	position: relative;
 }
 .social-btn {
 	background: #A9C2D9;
@@ -557,11 +603,56 @@ body {
 	/* margin-bottom: 10px; */
 	border-radius: 4px;
 }
+.social-title{
+	flex-direction: column;
+	display: flex;
+	width: 50%;
+	text-align: left;
+	/* padding-left: 20px; */
+	justify-content: center;
+	align-items: center;
+}
 .social-desc {
+	display: flex;
 	margin-bottom: 20px;
 	font-size: 1.1em;
 	color: #000;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	text-align: left;
+	position: relative;
 }
+
+
+.social-desc::after,
+.social-desc::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 200px; /* adjust as needed */
+  background: #A6806A;
+  left: 80%; /* center of desc */
+  top: 100%; /* bottom of desc */
+}
+
+.social-desc::before {
+  left: 130%; /* left line */
+  top: 70%;
+  transform: rotate(-45deg);
+}
+
+.social-desc::after {
+  left: 130%; /* right line */
+  top: -43%;
+  transform: rotate(45deg);
+}
+
+
+
+
+
+
 .social-cards {
 	display: flex;
 	gap: 40px;
