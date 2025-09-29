@@ -313,7 +313,7 @@ body{
         color: #D0D9DE;   
 }
 /* Scrolling */
-/* .scroll-x {
+.scroll-x {
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
@@ -334,5 +334,10 @@ body{
   min-width: 300px;
   max-width: 350px;
   display: inline-block;
-  vertical-align: top; */
+  vertical-align: top;
+}
+P{
+    white-space: normal;
+    word-wrap: break-word;
+}
 }

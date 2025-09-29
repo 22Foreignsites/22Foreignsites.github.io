@@ -1,0 +1,104 @@
+ h1{
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin-top: 1em;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin-top: 0.5em;
+}
+#car-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin: 3em auto;
+  min-height: 60vh;
+}
+.car-card {
+  border: 5px solid #e6a3a3;
+  border-radius: 1em;
+  overflow: hidden;
+  position: relative;
+  width: 210px;
+  background: #f5f5e6;
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.car-card img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+.car-card .hover-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #e6a3a3cc;
+  color: #fff;
+  text-align: center;
+  padding: 0.5em;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.car-card:hover .hover-label {
+  opacity: 1;
+}
+
+.car-card {
+  border: 5px solid #e6a3a3;
+  border-radius: 1em;
+  overflow: hidden;
+  position: relative;
+  width: 400px;
+  background: #f5f5e6;
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+}
+
+#popup {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: #f5f5e6;
+  border: 5px solid #e6a3a3;
+  border-radius: 1em;
+  box-shadow: 0 0 20px #0003;
+  padding: 2em;
+  z-index: 1000;
+  display: none;
+  text-align: center;
+  max-height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#popup img {
+  width: 210px;
+  border-radius: 1em;
+  max-height: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+#popup.hidden {
+  display: none;
+}
+#close {
+  position: absolute;
+  top: 0.5em; right: 0.5em;
+  cursor: pointer;
+  font-size: 1.5em;
+}
