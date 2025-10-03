@@ -90,9 +90,8 @@ paintings.forEach((painting)=>{
         }
         modalContent.innerHTML = `
             <h2>${painting.name}</h2>
-            <img src="${painting.image}" class="${imgClass}">
             <p><strong>Artist:</strong> ${painting.artist}</p>
-            <p><strong>Framed:</strong> ${painting.framed}</p>
+            <img src="${painting.image}" class="${imgClass}">
         `;
         modal.style.display = "block";
     };
