@@ -275,6 +275,10 @@ footer p {
     #shoes-section  {
         max-width:100% ;
     }
+
+    #breweries{
+        flex-wrap:wrap; 
+    }
     #shoes-section section {
         max-width:100% !important;
     }

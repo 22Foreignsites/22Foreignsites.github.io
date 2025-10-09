@@ -29,6 +29,8 @@ class Painting {
         columnContainer.append(divCol1);
         divCol1.append(this.picture(this.image));
 
+        
+
         //second Column
         // const divCol2 = document.createElement("div");
         // columnContainer.append(divCol2);
