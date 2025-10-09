@@ -57,17 +57,17 @@
     },
     {
         "_id": 9,
-        "name": "Jetsetter Slides",
-        "Color": "Rose Quartz",
+        "name": "22Pants",
+        "Color": "Greytomic",
         "Price": "$35.00",
-        "img": "images/pink-slippers.jpg"
+        "img": "json/images/nbp.webp"
     },
     {
         "_id": 10,
-        "name": "Foreign League Jersey",
-        "Color": "Frosted Pearl",
+        "name": "Foreign League Pants",
+        "Color": "Black Ice",
         "Price": "$62.00",
-        "img": "images/retro-jersey.jpg"
+        "img": "json/images/dtp.jpeg"
     }
 ]
 
