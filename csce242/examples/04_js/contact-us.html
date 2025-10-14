@@ -36,13 +36,48 @@
             </header>
             <main class="columns">
                 <section class="one">
+                    <iframe id = "map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12825.72252910307!2d-81.02006804035842!3d33.992008469844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f8a4d5bbba14ed%3A0xa1df61d4c363f31!2sPrisma%20Health%20Baptist%20Hospital!5e0!3m2!1sen!2sus!4v1760456978835!5m2!1sen!2sus"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     
                 </section>
                 <section class="one">
-                    <h3>Our Location</h3>
+                    <!-- <h3>Our Location</h3> -->
+                   <form method="POST" id="contact-form">
+
+                        <input type="hidden" name="access_key" value="165c5b93-89f1-4b58-920a-2dc856a34728">
+
+                        <p>
+                            <label for = "name">Name: </label>
+                            <input type="text" name="name" required>
+                        </p>
+                        <p>
+                            <label for = "email">Email: </label>
+                            <input type="email" name="email" required>
+                        </p>
+                        <p>
+                            <label for = "message">Message: </label>
+                            <textarea name="message" required></textarea>
+                        </p>
+
+                        <input type = "checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <p><button type = "submit">Submit Form</button></p>
+
+                        <!-- <input type="text" name="name" required>
+                        <input type="email" name="email" required>
+                        <textarea name="message" required></textarea>
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <button type="submit">Submit Form</button> -->
+
+                        <div id="contact-result"></div>
+
+                    </form>
+
                     
                 </section>
+               
             </main>
         </div>
+        <script src="contact.js"></script>
     </body>
 </html>
