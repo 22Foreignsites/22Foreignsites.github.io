@@ -1,3 +1,61 @@
+.hamburger {
+		display: none;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 60px;
+		height: 60px;
+		cursor: pointer;
+		z-index: 100;
+}
+.hamburger span {
+	display: block;
+	width: 35px;
+	height: 3px;
+	margin: 6px 0;  
+	background: #000;
+	border-radius: 3px;
+	transition: 0.3s;
+}
+.hamburger.active span:nth-child(1) {
+	transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+	opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+	transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 900px) {
+	.navbar ul {
+		display: none;
+		flex-direction: column;
+		position: absolute;
+		top: 60px;
+		left: 0;
+		width: 100vw;
+		background: #A9C2D9;
+		padding: 0;
+		margin: 0;
+		z-index: 99;
+	}
+	.navbar ul.show-nav {
+		display: flex;
+	}
+	.navbar li {
+		width: 100%;
+		text-align: center;
+		padding: 18px 0;
+		border-bottom: 1px solid #ccc;
+	}
+		.hamburger {
+			display: flex !important;
+			position: absolute;
+			right: 20px;
+			top: 10px;
+		}
+}
 /* Merch 2 elements - Banner image and overlay text */
 .merch2-banner {
 	position: relative;
@@ -925,6 +983,7 @@ html, body {
 	font-family: Arial, sans-serif;
 	background: #A9C2D9;
 	color: #000;
+	overflow-x: hidden;
 }
 
 .navbar {
@@ -1292,4 +1351,99 @@ a:hover, a:active {
   /* padding-top : 80px; */
   font-size: 25px;
 }
+}
+
+@media (max-width: 900px) {
+  /* compact hamburger container */
+  .hamburger {
+    display: flex !important;
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001; 
+  }
+
+  .navbar::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 240ms ease;
+    z-index: 1000;
+  }
+
+  /* the nav list: hidden by default, becomes a centered card when shown */
+  .navbar ul {
+    display: grid;
+    grid-template-columns: 1fr;     
+    gap: 0;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px) scale(0.98);
+    width: min(92vw, 520px);
+    background: #A9C2D9;
+    padding: 12px;
+    margin: 0;
+    border-radius: 10px;
+    list-style: none;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    transition: opacity 220ms ease, transform 220ms ease;
+    z-index: 1002; 
+  }
+
+  /* multi-column layout when there's space: 2 columns */
+  .navbar ul.columns-2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 16px;
+  }
+
+  /* visible state */
+  .navbar ul.show-nav {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+    pointer-events: auto;
+  }
+
+  /* show overlay when open */
+  .navbar.show-overlay::after {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .navbar li {
+    width: 100%;
+    text-align: center;
+    padding: 14px 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    background: transparent;
+  }
+
+  .navbar li:last-child {
+    border-bottom: none;
+  }
+
+  .navbar li a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.05rem;
+    padding: 6px 8px;
+  }
+
+  /* this make the make span lines smaller to match updated hamburger size */
+  .hamburger span {
+    width: 28px;
+    height: 3px;
+    margin: 5px 0;
+    border-radius: 3px;
+  }
 }
