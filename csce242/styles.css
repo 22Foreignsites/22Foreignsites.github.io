@@ -345,11 +345,5 @@ P{
     white-space: normal;
     word-wrap: break-word;
 }
-#main-nav li a,
-#p-main-nav li a {
-    word-break: break-all;        /* breaks long words/URLs anywhere */
-    overflow-wrap: break-word;    /* allows wrap at word boundaries */
-    display: block;               /* ensures they stay inside li boundaries and wrap */
-    max-width: 100%;              /* prevents overflow */
-}
+
 }
