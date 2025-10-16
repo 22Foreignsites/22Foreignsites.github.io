@@ -29,6 +29,8 @@ body{
 }
 #main-nav li{
     background: #D0D9DE;
+    word-break: break-all;
+    overflow-wrap: break-word;
     border-bottom: 1px solid #D0D9DE;
     padding: 16px;
     border-radius: 4px;
@@ -342,5 +344,12 @@ body{
 P{
     white-space: normal;
     word-wrap: break-word;
+}
+#main-nav li a,
+#p-main-nav li a {
+    word-break: break-all;        /* breaks long words/URLs anywhere */
+    overflow-wrap: break-word;    /* allows wrap at word boundaries */
+    display: block;               /* ensures they stay inside li boundaries and wrap */
+    max-width: 100%;              /* prevents overflow */
 }
 }
