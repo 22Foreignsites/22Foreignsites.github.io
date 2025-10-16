@@ -79,6 +79,8 @@ body{
     display: block; /* makes the whole area clickable */
     text-decoration: none; /*remove underline*/
     text-align: center;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 #p-main-nav a{
     color: white;
@@ -271,6 +273,7 @@ body{
 /*Main Navigation*/
 #main-nav li{
     flex:1;
+     
 } 
 #p-main-nav li{
     flex:1;
