@@ -24,13 +24,43 @@
             <!-- <div class="contact-btn">Contact US</div> -->
             <!-- <div class="contact-desc">Want to stay in contact, put your email in to either sign up for our email list or contact us</div> -->
              </div>
-                <form class="contact-form">
+                <!-- <form class="contact-form">
                     <input type="text" placeholder="Name" required>
                     <input type="email" placeholder="Email" required>
                     <input type="text" placeholder="Phone number">
                     <textarea placeholder="Comment" required></textarea>
                     <button type="submit" class="contact-send-btn">SEND MESSAGE</button>
-                </form>
+                </form> -->
+                <!-- <h3>Our Location</h3> -->
+                   <form method="POST" id="contact-form">
+
+                        <input type="hidden" name="access_key" value="165c5b93-89f1-4b58-920a-2dc856a34728">
+
+                        <p>
+                            <label for = "name">Name: </label>
+                            <input type="text" name="name" required>
+                        </p>
+                        <p>
+                            <label for = "email">Email: </label>
+                            <input type="email" name="email" required>
+                        </p>
+                        <p>
+                            <label for = "phone">Phone Number: </label>
+                            <input type="text" name="phone">
+                        </p>
+                        <p>
+                            <label for = "message">Message: </label>
+                            <textarea name="message" required></textarea>
+                        </p>
+
+                        <input type = "checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <p><button type = "submit">Submit Form</button></p>
+
+                        <div id="contact-result"></div>
+
+                    </form>
+
                 <div class = "contact-info">
                 <h2>
                         Contact Us
@@ -75,5 +105,6 @@
         </ul>
     </nav>
         <script src="js/hamburger.js"></script>
+        <script src="js/contact.js"></script>
 </body>
 </html>

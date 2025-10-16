@@ -1,0 +1,73 @@
+[
+    {
+        "_id": 1,
+        "name": "Continental Explorer Hoodie",
+        "Color": "Arctic Indigo",
+        "Price": "$99.00",
+        "img": "json/images/exp.avif"
+    },
+    {
+        "_id": 2,
+        "name": "Nomad Vision Pants",
+        "Color": "Sahara Blush",
+        "Price": "$89.00",
+        "img": "json/images/np.jpeg"
+    },
+    {
+        "_id": 3,
+        "name": "Wanderer Classic Shirt",
+        "Color": "Celestial White",
+        "Price": "$54.00",
+        "img": "json/images/wt.avif"
+    },
+    {
+        "_id": 4,
+        "name": "Globetrotter Snapback Hat",
+        "Color": "Sunrise Pink",
+        "Price": "$29.00",
+        "img": "json/images/hat.avif"
+    },
+    {
+        "_id": 5,
+        "name": "Atlas League Jersey",
+        "Color": "Ocean Mist",
+        "Price": "$65.00",
+        "img": "json/images/jersey.jpeg"
+    },
+    {
+        "_id": 6,
+        "name": "Foreign Dream Hoodie",
+        "Color": "Midnight Sky",
+        "Price": "$103.00",
+        "img": "json/images/nbh.jpg"
+    },
+    {
+        "_id": 7,
+        "name": "Greying Out Hoodie",
+        "Color": "Sunset Mirage",
+        "Price": "$103.00",
+        "img": "json/images/nbgh.jpg"
+    },
+    {
+        "_id": 8,
+        "name": "Passport Society Hoodie",
+        "Color": "Cloud Ash",
+        "Price": "$117.00",
+        "img": "json/images/cm.avif"
+    },
+    {
+        "_id": 9,
+        "name": "22Pants",
+        "Color": "Greytomic",
+        "Price": "$35.00",
+        "img": "json/images/nbp.webp"
+    },
+    {
+        "_id": 10,
+        "name": "Foreign League Pants",
+        "Color": "Black Ice",
+        "Price": "$62.00",
+        "img": "json/images/dtp.jpeg"
+    }
+]
+
