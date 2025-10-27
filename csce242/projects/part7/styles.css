@@ -1030,7 +1030,7 @@ header {
 }
 .header-img img {
 	width: 100%;
-	height: 300px;
+	height: 400px;
 	/* margin: 20px auto; */
 	display: block;
 	/* filter: grayscale(100%); */
@@ -1085,29 +1085,39 @@ header {
 .about-section, .mission-section {
 	display: flex;
 	align-items: center;
-	margin: 30px;
+	/* margin: 30px; */
 	/* margin: 30px 10vw 0 10vw; */
 	flex-direction: column;
 }
 .about-btn, .mission-btn {
 	/* background: #222; */
 	color: #fff;
-	padding: 20px;
-	font-size: 1.2em;
+	/* padding: 20px; */
+	/* font-size: 1.2em; */
 	border: none;
 	width: 100%;
-	text-align: left;
-	margin-bottom: 20px;
-	border-radius: 4px;
+	/* text-align: left; */
+	/* margin-bottom: 20px; */
+	/* border-radius: 4px; */
 }
 .about-text, .mission-text {
-	flex: 1;
+	/* flex: 1; */
 	font-size: 1.1em;
 	/* background: #fff; */
 	color: #000;
-	padding: 20px;
+	/* padding: 20px; */
 	border-radius: 4px;
 	/* border: 1px solid #000; */
+}
+.making-difference{
+	text-align: center;
+	align-items: center;
+	margin: 0px auto;
+	width: 100%;
+}
+
+.about-text p{
+	text-align: center;
 }
 
 .about-list {
@@ -1274,16 +1284,16 @@ a:hover, a:active {
 	/* background: #222; */
 	color: #fff;
 	font-weight: bold;
-	padding-top: 10px;
-	padding-bottom:0px;
-	font-size: 1.2em;
+	/* padding-top: 10px; */
+	/* padding-bottom:0px; */
+	/* font-size: 1.2em; */
 	border: none;
 	width: 100%;
-	text-align: left;
+	text-align: center;
 	/* margin-right: 20px; */
 	border-radius: 4px;
 	/* margin-top: 20px; */
-	margin: 0px 10vw 0 10vw;
+	/* margin: 0px 10vw 0 10vw; */
 
 }
 
@@ -1295,7 +1305,7 @@ a:hover, a:active {
 .about-section, .mission-section {
 	display: flex;
 	align-items: flex-start;
-	margin: 0px 10vw 0 10vw;
+	margin: 0px 10vw 0px 10vw;
 	flex-direction: column;
 	position: relative;
 }
@@ -1303,8 +1313,18 @@ a:hover, a:active {
 	text-align: left;
 	/* align-items: flex-start; */
 	margin-left: 0;
-	width: 50%;
+	/* width: 50%; */
 	/* flex: 1; */
+}
+/* reset default heading margins and fine-tune spacing */
+.about-btn h2,
+.making-difference h1 {
+  margin: 0;
+  padding: 0;
+}
+.making-difference h1 {
+  margin-top: 20px; /* small breathing room; set to 0 for no gap */
+  margin-bottom: 20px; /* space below heading */
 }
 .arrow {
   position: absolute;
@@ -1450,4 +1470,5 @@ a:hover, a:active {
     margin: 5px 0;
     border-radius: 3px;
   }
+  
 }
