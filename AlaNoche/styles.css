@@ -1,0 +1,286 @@
+nav.navbarTop {
+    color: white;
+    border: 1px solid #dfd4c8;;
+}
+
+
+
+nav.navbarTop ul {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    font-family: "Inter", "Roboto", "Open Sans", Arial, sans-serif;
+    font-size: 18px;
+    list-style: none;
+    justify-content: center;
+}
+
+nav.navbarTop a {
+    text-decoration: none;
+    color: #F2636F;
+}
+nav.navbarTop a:visited {
+    color: #8C030E;
+}
+
+
+body {
+    background-color: #ffe6ec;
+}
+
+.body-margin{
+    margin: 60px;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 50px;
+    margin-top: -60px;
+    color: #8C030E;
+    font-family: 'Great Vibes', cursive;}
+.text p{
+    margin-top: 0;
+    margin-bottom: 80px; /* reduced so arrow can sit closer */
+}
+
+.text{ position: relative; }
+
+/* when arrow is inside .text, position it absolutely toward the bottom */
+.text .scroll-wrap{ position:absolute; left:50%; transform:translateX(-50%); bottom:16px; margin-bottom:0; }
+.text .scroll-down{ width:48px; height:48px; border-radius:24px; }
+
+/* Scroll-down arrow between hero/text and next section */
+.scroll-wrap{ display:flex; justify-content:center; align-items:center; margin-bottom:112px; }
+.scroll-down{ display:inline-flex; align-items:center; justify-content:center; width:56px; height:56px; border-radius:28px; background:linear-gradient(180deg,#fff 0%, #ffeef2 100%); box-shadow:0 6px 18px rgba(0,0,0,0.08); text-decoration:none; color:#c33; }
+.scroll-down svg{ fill:#c33; transform-origin:center; animation: bounce 1.6s infinite; }
+.scroll-down:focus{ outline:3px solid rgba(242,99,111,0.28); outline-offset:6px; }
+
+@keyframes bounce{
+    0%{ transform: translateY(0); opacity:1 }
+    50%{ transform: translateY(8px); opacity:0.9 }
+ 100%{ transform: translateY(0); opacity:1 }
+}
+
+@media (prefers-reduced-motion: reduce){ .scroll-down svg{ animation: none } }
+
+.text-inner{
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.text-inner h1{
+    margin: 0;
+    margin-top: 93px;
+}
+
+.night{
+    display: flex;
+    justify-content: center;
+    height: 700px;
+    padding: 10px; /* space for the border */
+    border: 8px solid transparent; /* base for border-image */
+    border-image: linear-gradient(180deg, #fff 0%, #FFEFEF 100%) 1 round;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    background-clip: padding-box; /* ensure inner bg doesn't underlap border */
+}
+
+.night img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px; /* subtle rounding for the image itself */
+}
+
+/* layout inside the night section: image + caption side-by-side */
+.night-inner{ display:flex; gap:24px; align-items:center; max-width:1200px; width:100%; }
+/* Give the image more flex so it appears larger while preserving aspect ratio */
+.night-image{ flex: 1.6 1 90%; }
+.night-image img{ width:100%; height:auto; max-height: calc(700px - 48px); object-fit:cover; }
+.night-caption{ flex: 1 1 36%; background: linear-gradient(180deg, #fff 0%, #FFEFEF 100%); padding:26px; border-radius:10px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+.night-caption h3{ margin:0 0 20px 0; color:#8C030E; font-size:22px; }
+.night-caption p{ margin:0; color:#333; line-height:1.5; font-size:17px; }
+
+@media (max-width:800px){
+    .night-inner{ flex-direction:column; }
+    .night{ height: auto; padding:14px; }
+}
+
+/* Flashcards grid and flip styles */
+.flashcards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 16px;
+    z-index: 5; /* above animated hearts */
+}
+
+.card{
+    perspective: 1000px;
+    cursor: pointer;
+    height: 180px;
+}
+
+.card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card.is-flipped .card-inner{
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.card-front{
+    background: linear-gradient(180deg, #fff 0%, #FFEFEF 100%);
+    color: #333;
+}
+
+.card-back{
+    background: linear-gradient(180deg, #F2636F 0%, #8C030E 100%);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.card:focus{
+    outline: 3px solid rgba(242,99,111,0.35);
+    outline-offset: 4px;
+}
+
+.card-front h3{
+    margin: 0 0 6px 0;
+    font-size: 18px;
+}
+
+.card-front small{ color: #666; }
+
+.card-back p{ margin: 0; font-size: 15px; line-height: 1.3; text-align: center; }
+
+/* small screens tweak */
+@media (max-width: 520px){
+    .card{ height: 160px; }
+}
+
+/* --- Heart background (paste into styles.css, replace the old heart section) --- */
+.heart-wrap {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heart {
+    position: absolute;
+    width: 28px; /* base box for heart */
+    height: 24px;
+    opacity: 0.98;
+    --hc: #ff5678; /* default heart color */
+    bottom: var(--b, -80px);
+    /* apply rise (translateY) and sway (bottom) via animations; scaling via --s */
+    transform: scale(var(--s,1));
+    transform-origin: center;
+    animation: rise var(--rise-dur, 10s) linear var(--rise-delay, 0s) infinite,
+                         sway var(--sway-dur, 4s) ease-in-out var(--sway-delay, 0s) infinite;
+}
+
+/* create heart shape using pseudo-elements */
+.heart:before,
+.heart:after{
+    content: "";
+    position: absolute;
+    width: 14px; /* half of container width */
+    height: 20px;
+    background: var(--hc, #ff5678);
+    border-radius: 14px 14px 0 0; /* round top corners */
+    top: 0;
+}
+.heart:before{ left: 14px; transform: rotate(-45deg); transform-origin: 0 100%; }
+.heart:after { left: 0;    transform: rotate(45deg);  transform-origin: 100% 100%; }
+
+/* keyframes for rising & sideways sway */
+@keyframes rise {
+    0%   { transform: translateY(0) rotate(0deg) scale(var(--s,1)); opacity: 0; }
+    10%  { opacity: 0.9; }
+    100% { transform: translateY(-120vh) rotate(0deg) scale(var(--s,1)); opacity: 0; }
+}
+@keyframes sway {
+    0%   { bottom: var(--b, -80px); }
+    50%  { bottom: calc(var(--b, -80px) + var(--bob, 20px)); }
+    100% { bottom: var(--b, -80px); }
+}
+
+/* example staggered hearts (set CSS var --s to change size) */
+.heart:nth-child(1){ left:6%;  --s:1;   --b:-80px; --bob:22px; --rise-dur:9s;  --rise-delay:0s;  --sway-dur:4s;  --sway-delay:0s; }
+.heart:nth-child(2){ left:18%; --s:0.9; --b:-100px; --bob:16px; --rise-dur:11s; --rise-delay:0.8s; --sway-dur:5s;  --sway-delay:0.3s; }
+.heart:nth-child(3){ left:50%; --s:1.2; --b:-70px; --bob:30px; --rise-dur:8s;  --rise-delay:0.25s;--sway-dur:3.8s;--sway-delay:0.15s; }
+.heart:nth-child(4){ left:82%; --s:0.8; --b:-90px; --bob:18px; --rise-dur:10s; --rise-delay:0.5s; --sway-dur:5.5s; --sway-delay:0.4s; }
+.heart:nth-child(5){ left:92%; --s:0.45;--b:-110px;--bob:12px; --rise-dur:12s; --rise-delay:0.6s; --sway-dur:4.8s; --sway-delay:0.6s; }
+.heart:nth-child(6){ left:98%; --s:1.8; --b:-60px; --bob:36px; --rise-dur:7.5s;--rise-delay:0.1s; --sway-dur:3.6s; --sway-delay:0.2s; }
+.heart:nth-child(7){ left:72%; --s:0.6; --b:-95px; --bob:20px; --rise-dur:13s; --rise-delay:1.1s; --sway-dur:6s;  --sway-delay:0.5s; }
+.heart:nth-child(8){ left:60%; --s:0.4; --b:-85px; --bob:14px; --rise-dur:9.8s; --rise-delay:0.35s;--sway-dur:4.2s; --sway-delay:0.25s; }
+.heart:nth-child(9){ left:44%; --s:0.5; --b:-78px; --bob:26px; --rise-dur:10.7s;--rise-delay:0.45s;--sway-dur:5.1s; --sway-delay:0.33s; }
+.heart:nth-child(10){ left:40%; --s:0.7; --b:-88px; --bob:19px; --rise-dur:8.6s; --rise-delay:0.05s;--sway-dur:3.9s; --sway-delay:0.12s; }
+.heart:nth-child(11){ left:30%; --s:0.6; --b:-92px; --bob:17px; --rise-dur:11.6s;--rise-delay:0.75s;--sway-dur:5.6s; --sway-delay:0.42s; }
+.heart:nth-child(12){ left:22%; --s:1;   --b:-68px; --bob:28px; --rise-dur:9.3s; --rise-delay:0.2s; --sway-dur:4.4s; --sway-delay:0.18s; }
+.heart:nth-child(13){ left:12%; --s:0.9; --b:-102px; --bob:15px; --rise-dur:12.5s;--rise-delay:0.9s; --sway-dur:6.2s; --sway-delay:0.6s; }
+.heart:nth-child(14){ left:94%; --s:0.3; --b:-120px;--bob:10px; --rise-dur:14s; --rise-delay:1.2s; --sway-dur:5.8s; --sway-delay:0.7s; }
+.heart:nth-child(15){ left:86%; --s:0.7; --b:-76px; --bob:24px; --rise-dur:8.9s; --rise-delay:0.15s;--sway-dur:4.6s; --sway-delay:0.22s; }
+/* add more nth-child rules as needed */
+
+/* respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .heart, .heart:before, .heart:after { animation: none !important; opacity: 0.9; }
+}
+
+/* ensure main UI sits above hearts */
+nav.navbarTop { position: relative; z-index: 10; }
+.text, .flashcards, .night { position: relative; z-index: 8; }
+
+/* Passcode overlay styles */
+.pass-overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+.passbox{
+    background: #fff;
+    color: #222;
+    padding: 24px;
+    border-radius: 8px;
+    width: 320px;
+    max-width: calc(100% - 32px);
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+}
+.passbox h2{ margin: 0 0 12px 0; }
+.passbox input{ width: 100%; padding: 10px; font-size: 16px; margin-bottom: 12px; border-radius: 6px; border: 1px solid #ccc; }
+.passbox button{ background:#F2636F; color:#fff; border:none; padding:10px 16px; border-radius:6px; cursor:pointer; }
+.passbox button:active{ transform: translateY(1px); }
+.passbox p{ margin-top:8px; color:#8C030E; min-height:20px; }
+
+

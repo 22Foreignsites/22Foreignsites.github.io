@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="Styles.css"> <!-- link to the stylesheet in this project -->
+    <nav class="navbarTop">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="Letters.html">Letters</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+</head>
+<body>
+    <!-- Animated hearts background -->
+    <div class="heart-wrap" aria-hidden="true">
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+    </div>
+
+    <div class="body-margin"> 
+    <!-- <nav class="navbarTop">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="Letters.html">Letters</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+        </ul>
+    </nav> -->
+    
+    <div class="text">
+    <div class="text-inner"> 
+    <h1>Happy <br> Valentines<br>day</h1>
+    </div>
+    <p>Happy Valentines day, I wanted to do something special for you since we are long distance and I can't physically get you a present so I decided to make you one I hope you enjoy it.</p>
+
+    <!-- animated scroll-down arrow (positioned relative to .text) -->
+    <!-- <div class="scroll-wrap">
+        <a href="#night" class="scroll-down" aria-label="Scroll to next section" role="button">
+            <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false">
+                <path d="M12 16.5l-7-7 1.4-1.4L12 13.7l5.6-5.6L19 9.5z"/>
+            </svg>
+        </a>
+    </div> -->
+    </div>
+
+    <!-- animated scroll-down arrow -->
+    <div class="scroll-wrap">
+        <a href="#night" class="scroll-down" aria-label="Scroll to next section" role="button">
+            <!-- simple chevron SVG -->
+            <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false">
+                <path d="M12 16.5l-7-7 1.4-1.4L12 13.7l5.6-5.6L19 9.5z"/>
+            </svg>
+        </a>
+    </div>
+
+    <div id="night" class="night">
+        <div class="night-inner">
+            <div class="night-image">
+                <img src="images/OurSpot.png" alt="OurSpot">
+            </div>
+            <div class="night-caption">
+                <h3>Our Spot</h3>
+                <p>This spot is greenville by the waterfall we know is a special spot for you and I. It where are hometown is and hold such much memories for us. On our first date, this is where we ended, this where the stars aligned and ultimately gave us a future together.</p>
+            </div>
+        </div>
+    </div>
+
+        <!-- Passcode overlay (blocks interaction until correct passcode entered) -->
+        <div id="passcode-overlay" class="pass-overlay" role="dialog" aria-modal="true" aria-label="Site passcode">
+            <div class="passbox">
+                <h2>Enter passcode</h2>
+                <h3>
+                    What did I think you said when I asked you out?
+                </h3>
+                <input id="passcode-input" type="password" inputmode="text" placeholder="Passcode" aria-label="Passcode">
+                <div class="pass-actions">
+                    <button id="passcode-submit">Enter</button>
+                </div>
+                <p id="passcode-msg" aria-live="polite"></p>
+            </div>
+        </div>
+
+    <!-- Flashcards interactive grid -->
+    <section class="flashcards" aria-label="Interactive flashcards - click to flip">
+        <!-- repeat card elements; front shows the prompt, back reveals the text -->
+        <div class="card" tabindex="0" role="button" aria-pressed="false">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Reasons I love you</h3>
+                    <small>Click to reveal</small>
+                </div>
+                <div class="card-back">
+                    <p>You put thoughts into the small things just as much as the big things</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" tabindex="0" role="button" aria-pressed="false">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Reasons I love you</h3>
+                    <small>Click to reveal</small>
+                </div>
+                <div class="card-back">
+                    <p>Your smart, and your smarter than what you give yourself credit for.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" tabindex="0" role="button" aria-pressed="false">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Reasons I love you</h3>
+                    <small>Click to reveal</small>
+                </div>
+                <div class="card-back">
+                    <p>You're super funny, like really funny.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" tabindex="0" role="button" aria-pressed="false">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Reasons I love you</h3>
+                    <small>Click to reveal</small>
+                </div>
+                <div class="card-back">
+                    <p>Your easy to talk to, I feel like I can talk to you about anything</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" tabindex="0" role="button" aria-pressed="false">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Reasons I love you</h3>
+                    <small>Click to reveal</small>
+                </div>
+                <div class="card-back">
+                    <p>You're caring, and you go out your way to care about people</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" tabindex="0" role="button" aria-pressed="false">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Reasons I love you</h3>
+                    <small>Click to reveal</small>
+                </div>
+                <div class="card-back">
+                    <p>Your considerate, you personally go out your way to not only consider about me but the people you care about.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" tabindex="0" role="button" aria-pressed="false">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Reasons I love you</h3>
+                    <small>Click to reveal</small>
+                </div>
+                <div class="card-back">
+                    <p>You always keep it really, no matter what the situation is.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" tabindex="0" role="button" aria-pressed="false">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Reasons I love you</h3>
+                    <small>Click to reveal</small>
+                </div>
+                <div class="card-back">
+                    <p>You're my world, and I can't imagine my life without you.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+    // Flip cards on click or keyboard (Enter / Space)
+    document.addEventListener('DOMContentLoaded', function(){
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            card.addEventListener('click', () => toggle(card));
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(card); }
+            });
+        });
+        function toggle(card){
+            card.classList.toggle('is-flipped');
+            const pressed = card.classList.contains('is-flipped');
+            card.setAttribute('aria-pressed', pressed);
+        }
+    });
+    </script>
+        <script>
+        // Simple client-side passcode protection (not secure for sensitive data)
+        (function(){
+            const PASSCODE = 'Maybe'; // change this to any passcode you want
+            const overlay = document.getElementById('passcode-overlay');
+            const input = document.getElementById('passcode-input');
+            const submit = document.getElementById('passcode-submit');
+            const msg = document.getElementById('passcode-msg');
+
+            function unlock(){
+                sessionStorage.setItem('siteUnlocked','1');
+                overlay.style.display = 'none';
+            }
+
+            if(sessionStorage.getItem('siteUnlocked') === '1'){
+                overlay.style.display = 'none';
+            } else {
+                overlay.style.display = 'flex';
+                input.focus();
+            }
+
+            submit.addEventListener('click', tryPass);
+            input.addEventListener('keydown', function(e){ if(e.key === 'Enter') tryPass(); });
+
+            function tryPass(){
+                if(input.value === PASSCODE){ unlock(); }
+                else { msg.textContent = 'Incorrect passcode'; input.value=''; input.focus(); }
+            }
+        })();
+        </script>
+    <script>
+    // custom smooth scroll with configurable duration and reduced-motion support
+    document.addEventListener('DOMContentLoaded', function(){
+        const arrow = document.querySelector('.scroll-down');
+        const target = document.getElementById('night');
+        if(!arrow || !target) return;
+
+        // prefer-reduced-motion: skip animation
+        const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        function animateScroll(toY, duration){
+            if(reduced){ window.scrollTo(0, toY); return; }
+            const startY = window.pageYOffset;
+            const distance = toY - startY;
+            const startTime = performance.now();
+            const ease = t => t<0.5 ? 2*t*t : -1 + (4-2*t)*t; // easeInOutQuad-ish
+
+            function step(now){
+                const elapsed = now - startTime;
+                const t = Math.min(1, elapsed / duration);
+                const v = ease(t);
+                window.scrollTo(0, Math.round(startY + distance * v));
+                if(elapsed < duration) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+        }
+
+        function scrollToTarget(duration){
+            const rect = target.getBoundingClientRect();
+            const targetY = rect.top + window.pageYOffset;
+            animateScroll(targetY, duration);
+        }
+
+        const DURATION_MS = 1800; // slower scroll duration
+
+        arrow.addEventListener('click', function(e){ e.preventDefault(); scrollToTarget(DURATION_MS); });
+        arrow.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); scrollToTarget(DURATION_MS); } });
+    });
+    </script>
+</div>
+</body>
+</html>
