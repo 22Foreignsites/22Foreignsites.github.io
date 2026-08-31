@@ -1,0 +1,703 @@
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+body {
+  margin: 0;
+  background: linear-gradient(
+    to bottom,
+    #000000 0%,
+    #000000 50%,
+    #6c6c6c 100% 
+  );;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+.navbar a,
+.logo-name h1,
+.btn {
+  font-family: 'Oswald', sans-serif;
+}
+
+.hero {
+  position: relative;
+  color: #fff;
+  min-height: 80vh;
+  text-align: left;
+  padding: 100px 20px;
+  font-size: 30px;
+  overflow: hidden;
+}
+
+.hero h1 {
+  margin: 0 0 12px;
+  font-size: 80px;
+  position: relative;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.75);
+
+}
+
+.hero p {
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.75);
+}
+
+.text-red {
+  color: #dc2626; 
+}
+
+.hero__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 0;
+  /* object-fit: cover; */
+}
+
+/* Slideshow styles */
+.hero__slideshow {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hero__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 600ms ease, transform 800ms ease;
+}
+
+.hero__slide[aria-hidden="false"],
+.hero__slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hero__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  /* background: rgba(0,0,0,0.45); */
+  z-index: 1;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 3;
+
+}
+
+/* Hero grid: content left, quote right */
+
+
+/* Quote styling */
+.hero__quote {
+  color: #fff;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 400px; /* controls width */
+  display: flex;
+  /* padding: 100px 60px; */
+  text-align: left;
+  background: rgba(0,0,0,0.25); /* subtle panel so text reads on the image */
+  padding: 18px;
+  border-radius: 8px;
+  border-left: 4px solid #dc2626; /* accent line */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  z-index: 3;
+}
+
+/* Semantic blockquote tweaks */
+.hero__quote blockquote {
+  margin: 0;
+  font-style: italic;
+  line-height: 1.4;
+}
+.hero__quote footer {
+  margin-top: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background: #dc2626; /* red */
+  color: #000000;
+  border: 2px solid rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+
+.hero__cta {
+  margin-top: 18px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.navbar {
+  background-color: #000000;
+  padding: 49px 0px; /* larger vertical padding */
+  min-height: 96px;
+  font-size: 25px;
+}
+
+.navbar-inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: right; /* center nav links */
+  position: relative; /* make logo absolute relative to this container */
+}
+
+.boxing-animation {
+  height: 85px;
+  width: auto;
+  image-rendering: pixelated;
+  margin-left: 500px;
+  margin-right: auto;
+}
+
+
+.logo img {
+  height: 80px;
+  width: auto;
+  display: block;
+  transform: translateX(-10px);
+}
+
+/* Position logo absolutely inside navbar-inner so links can be centered */
+.logo {
+  position: absolute;
+  left: 0px;
+  top: 25px;
+  transform: translateY(-50%);
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo-name h1 {
+    margin: 0;
+    line-height: 1;
+    margin-left: -10px;
+}
+.logo-name p {
+    margin: 0;
+    line-height: 1;
+    font-size: 25px;
+}
+
+.navbar {
+  --nav-gap: 28px; /* default gap between nav links */
+  
+}
+
+.navbar a {
+  color: #fff;
+  margin: 0 var(--nav-gap);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Nav links container to keep spacing on the right */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-address {
+  position: absolute;
+  top: -29px;
+  right: 24px;
+  margin: 0;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  opacity: 0.9;
+}
+
+@media (max-width: 640px) {
+  .logo img { height: 40px; }
+  .nav-links a { margin: 0 10px; font-size: 14px; }
+  /* On small screens keep logo in the flow so it doesn't overlap centered links */
+  .logo { position: static; transform: none; }
+  .navbar-inner { justify-content: flex-start; }
+}
+
+main {
+  padding: 0px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.attention-grabber {
+  background-color: #000;
+  padding: 0px 0;
+  text-align: center;
+}
+
+.scroll-arrow {
+  display: inline-block;
+  animation: bounce 1.5s infinite;
+  color: #dc2626;
+  margin-left: 200px;
+  margin-right: 200px;
+  position: relative;
+  top: -20px;
+  font-size: 50px;
+  text-decoration: none;
+}
+
+@keyframes bounce {
+  0%,100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.intro {
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-line {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    top: 150px;
+    right: 150px;
+    pointer-events: none;
+}
+
+.scroll-svg {
+  width: 100%;
+  height: auto;
+}
+
+.draw-line {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+}
+
+.intro-line img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.intro h2,
+.memberships h2,
+.about h2 {
+  font-size: 104px;
+  margin-top: 12px;
+  z-index: 4;
+  position: relative;
+}
+
+.intro h2 {
+  font-size: 104px;
+  margin-top: 12px;
+  z-index: 2;
+}
+
+.intro p,
+.about p {
+  line-height: 1.6;
+  max-width: 900px;
+  z-index: 2;
+  position: relative;
+}
+
+.about p {
+  font-size: 30px;
+  background: transparent;
+}
+
+.about-grid {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+}
+
+.about-copy,
+.about-contact {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.about-copy {
+  padding-right: 30px;
+  border-right: 4px solid #dc2626;
+}
+
+.about-contact {
+  border-radius: 12px;
+  padding: 24px 28px;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.8;
+}
+
+.contact-list strong {
+  color: #ffffff;
+}
+
+.about{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  
+}
+
+@media (max-width: 820px) {
+  .about-grid {
+    flex-direction: column;
+  }
+}
+
+/* Intro two-column layout: video left, text right */
+.intro-row {
+  display: grid;
+  grid-template-columns: 700px 1fr;
+  gap: 24px;
+  align-items: start;
+  margin-top: 16px;
+  z-index: 2;
+}
+
+.intro-video iframe {
+  width: 100%;
+  height: 420px;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.intro-text p {
+  margin: 0;
+  text-align: left; /* keep text readable on the right */
+}
+
+@media (max-width: 820px) {
+  .intro-row { grid-template-columns: 1fr; }
+  .intro-video iframe { height: 200px; }
+}
+
+.intro p {
+  text-align: right;
+  margin-left: auto;
+  max-width: 680px;
+  font-size: 30px;
+}
+
+.membership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* three cards per row */
+  gap: 26px;
+  align-items: stretch;
+  margin-top: 32px;
+}
+
+.membership-card {
+  background: rgba(0,0,0,0.45);
+  border-radius: 12px;
+  padding: 28px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  min-height: 320px; /* make cards bigger */
+  display: flex;
+  align-items: flex-end;
+}
+
+.membership-card .badge {
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 22px;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
+
+.membership-card .card-inner {
+  padding: 48px 18px 18px 18px; /* add top padding to avoid overlapping the logo */
+}
+.membership-card {
+  /* gradient as the default look */
+  background: linear-gradient(180deg, #000000 0%, #000000 70%, #670202d0 100%);
+  border-radius: 12px;
+  padding: 28px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  min-height: 620px; /* make cards bigger */
+}
+
+/* small logo at the top middle of each membership card */
+.membership-card .card-logo {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  width: 196px; /* larger by default */
+  height: auto;
+  z-index: 4;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.06);
+  padding: 6px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+  transition: opacity 260ms ease, transform 300ms cubic-bezier(.2,.9,.2,1);
+}
+
+@media (max-width: 640px) {
+  .membership-card .card-logo { width: 64px; top: 8px; }
+  .membership-card .card-inner { padding-top: 56px; }
+}
+
+/* hide logo when card is hovered or focused */
+.membership-card:hover .card-logo,
+.membership-card:focus-within .card-logo {
+  opacity: 0;
+  transform: translateX(-50%) scale(0.6) translateY(-6px);
+}
+
+/* image layer (hidden) - will fade/scale in on hover */
+.membership-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: scale(1.06);
+  transition: opacity 480ms ease, transform 700ms ease;
+  z-index: 0; /* beneath content */
+}
+
+/* dim overlay that appears with the image to keep text readable */
+.membership-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.0), rgba(0,0,0,0.0));
+  opacity: 0;
+  transition: opacity 360ms ease;
+  z-index: 1;
+}
+
+.membership-card .card-inner {
+  padding: 18px;
+  position: relative;
+  z-index: 2; /* above the image/overlay */
+}
+.memberships h2{
+  font-size: 104px;
+}
+.membership-card h3 {
+  margin: 0 0 8px;
+  font-size: 48px;
+}
+
+.membership-card .muted {
+  color: rgba(255,255,255,0.7);
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.membership-card .price {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 6px 0 8px;
+  color: #ffd166;
+}
+
+.membership-card .per {
+  font-size: 24px;
+  color: rgba(255,255,255,0.7);
+  font-weight: 600;
+}
+
+.membership-card p{
+  font-size: 28px;
+}
+
+.membership-card .desc {
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 12px;
+}
+
+.membership-card .features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: rgba(255,255,255,0.9);
+}
+
+.membership-card .features li {
+  padding: 6px 0;
+  font-size: 20px;
+}
+
+/* Accent colors */
+/* .card--accent-red .badge { background: #ef4444; }
+.card--accent-green .badge { background: #10b981; }
+.card--accent-orange .badge { background: #f59e0b; }
+.card--accent-blue .badge { background: #3b82f6; }
+.card--accent-purple .badge { background: #8b5cf6; } */
+
+.card--bg-adult::after { background-image: url('images/boxing.jpg'); }
+.card--bg-child::after { background-image: url('images/boxing4.jpg'); }
+.card--bg-family::after { background-image: url('images/family.jpg'); background-position: center 30%; }
+.card--bg-responders::after { background-image: url('images/firstresponder.png'); }
+.card--bg-daypass::after { background-image: url('images/DayPass.jpg'); }
+
+.membership-card .card-inner {
+  /* place the card content up the card (about 75% up from the bottom)
+     Top is set to 25% so the inner box sits near the upper quarter of the card.
+     Adjust `top` value to fine tune (e.g., use 20% or 30%). */
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  top: 40%;
+  padding: 18px;
+  z-index: 2;
+}
+.membership-card:hover::after,
+.membership-card:focus-within::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* .membership-card:hover::before,
+.membership-card:focus-within::before {
+  opacity: 1;
+  background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.5));
+} */
+
+/* Responsive breakpoints for membership grid */
+@media (max-width: 1000px) {
+  .membership-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .membership-card { min-height: 300px; padding: 22px; }
+}
+
+@media (max-width: 640px) {
+  .membership-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .membership-card { min-height: 220px; padding: 18px; }
+  .hero__content { padding: 22px; }
+}
+
+@media (max-width: 900px) {
+  .membership-card { min-height: 180px; }
+  .membership-card .card-inner { padding-left: 78px; }
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.card .artwork {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  margin: 6px 0;
+  font-size: 18px;
+}
+
+.price {
+  color: #111827;
+  font-weight: 700;
+  margin: 4px 0 8px;
+}
+
+.desc {
+  color: #374151;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 16px 0;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 780px) {
+  .hero__content {
+    grid-template-columns: 1fr;
+  }
+  .hero__quote {
+    text-align: right;
+    border-left: none;
+    border-top: 4px solid #dc2626; /* use top border when stacked */
+  }
+}
